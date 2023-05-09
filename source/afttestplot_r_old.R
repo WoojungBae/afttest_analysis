@@ -1,0 +1,209 @@
+afttestplot = function(object, path = 50, std = "std"){
+  
+  # testtype
+  testtype = object$TestType
+  # std
+  if (!std %in% c("std","unstd")) {
+    std = "std"
+  }
+  # path
+  if (!is.numeric(path)) {
+    path = 50
+  } else {
+    path = max(min(path,length(object$app_std_path)),10)
+  }
+  
+  x_axis = 1:length(object$Resid)
+  Q = c(0,0.1,0.25,0.4,0.5,0.6,0.75,0.9,1)
+  Q = round(quantile(x_axis,Q))
+  K = length(Q)
+  
+  if(testtype=="Omni"){
+    resid = c(NA)
+    app = matrix(NA)
+    obs = matrix(NA)
+    
+    Figure = list(NA)
+    if (std == "std") {
+      for(k in 1:K){
+        Q_k = Q[k]
+        
+        # DF_app
+        DF_app=data.frame()
+        for (group in 1:path){
+          temp = object$app_std_path[[group]][,Q_k]
+          temp = data.frame(group,resid=x_axis,app=temp)
+          DF_app = rbind(DF_app,temp)
+        }
+        
+        # DF_obs
+        DF_obs = data.frame(group,resid=x_axis,obs=object$obs_std_path[,Q_k])
+        
+        # Figure
+        if (k==5){
+          Figure_k =
+            ggplot() +
+            geom_step(data=DF_app,aes(x=resid,y=app,group=group),colour="grey",alpha=0.5) +
+            geom_step(data=DF_obs,aes(x=resid,y=obs),colour="tomato",lwd=0.25) +
+            ylab("Test Statistic")+xlab("Residuals") +
+            ggtitle(paste0("Omnibus (standardized): quantile(z): ",names(Q)[k])) + 
+            scale_y_continuous(breaks = round(seq(min(c(DF_app$app,DF_obs$obs)), max(c(DF_app$app,DF_obs$obs)), length.out = 5),1)) +
+            theme(plot.title=element_text(hjust=0.5))
+        } else {
+          Figure_k =
+            ggplot() +
+            geom_step(data=DF_app,aes(x=resid,y=app,group=group),colour="grey",alpha=0.5) +
+            geom_step(data=DF_obs,aes(x=resid,y=obs),colour="tomato",lwd=0.25) +
+            ylab("Test Statistic")+xlab("Residuals") +
+            ggtitle(paste0("quantile(z): ",names(Q)[k])) + 
+            scale_y_continuous(breaks = round(seq(min(c(DF_app$app,DF_obs$obs)), max(c(DF_app$app,DF_obs$obs)), length.out = 3),1)) +
+            theme(plot.title=element_text(hjust=0.5))
+        }
+        Figure[[k]] = Figure_k
+      }
+    } else {
+      for(k in 1:K){
+        Q_k = Q[k]
+        
+        #DF_app
+        DF_app = data.frame()
+        for (group in 1:path){
+          temp = object$app_path[[group]][,Q_k]
+          temp = data.frame(group,resid=x_axis,app=temp)
+          DF_app = rbind(DF_app,temp)
+        }
+        
+        #DF_obs
+        DF_obs = data.frame(group,resid=x_axis,obs=object$obs_path[,Q_k])
+        
+        # Figure
+        if (k==5){
+          Figure_k =
+            ggplot() +
+            geom_step(data=DF_app,aes(x=resid,y=app,group=group),colour="grey",alpha=0.5) +
+            geom_step(data=DF_obs,aes(x=resid,y=obs),colour="tomato",lwd=0.25) +
+            ylab("Test Statistic")+xlab("Residuals") +
+            ggtitle(paste0("Omnibus (unstandardized): quantile(z): ",names(Q)[k])) + 
+            scale_y_continuous(breaks = round(seq(min(c(DF_app$app,DF_obs$obs)), max(c(DF_app$app,DF_obs$obs)), length.out = 5),1)) +
+            theme(plot.title=element_text(hjust=0.5))
+        } else {
+          Figure_k =
+            ggplot() +
+            geom_step(data=DF_app,aes(x=resid,y=app,group=group),colour="grey",alpha=0.5) +
+            geom_step(data=DF_obs,aes(x=resid,y=obs),colour="tomato",lwd=0.25) +
+            ylab("Test Statistic")+xlab("Residuals") +
+            ggtitle(paste0("quantile(z): ",names(Q)[k])) + 
+            scale_y_continuous(breaks = round(seq(min(c(DF_app$app,DF_obs$obs)), max(c(DF_app$app,DF_obs$obs)), length.out = 3),1)) +
+            theme(plot.title=element_text(hjust=0.5))
+        }
+        Figure[[k]] = Figure_k
+      }
+    }
+    
+    lay = rbind(c(1,1,1,1),c(1,1,1,1),c(2,3,4,5),c(6,7,8,9))
+    return(grid.arrange(Figure[[5]],
+                        Figure[[1]],Figure[[2]],Figure[[3]],Figure[[4]],
+                        Figure[[6]],Figure[[7]],Figure[[8]],Figure[[9]],
+                        layout_matrix=lay))
+    
+  } else if(testtype=="Link"){
+    resid = c(NA)
+    app = c(NA)
+    obs = c(NA)
+    if (std=="std"){
+      # DF_app
+      DF_app = data.frame()
+      for (group in 1:path){
+        temp = object$app_std_path[[group]]
+        temp = data.frame(group,resid=x_axis,app=temp)
+        DF_app = rbind(DF_app,temp)
+      }
+      
+      # DF_obs
+      DF_obs = data.frame(group,resid=x_axis,obs=object$obs_std_path)
+      
+      # Figure
+      Figure =
+        ggplot() +
+        geom_step(data=DF_app,aes(x=resid,y=app,group=group),colour="grey",alpha=0.5) +
+        geom_step(data=DF_obs,aes(x=resid,y=obs),colour="tomato",lwd=0.25) +
+        ylab("Test Statistic")+xlab("Residuals")+ggtitle("Link Function (standardized)") + 
+        scale_y_continuous(breaks = round(seq(min(c(DF_app$app,DF_obs$obs)), max(c(DF_app$app,DF_obs$obs)), length.out = 5),1)) +
+        theme(plot.title=element_text(hjust=0.5))
+      
+    } else {
+      # DF_app
+      DF_app = data.frame()
+      for (group in 1:path){
+        temp = object$app_path[[group]]
+        temp = data.frame(group,resid=x_axis,app=temp)
+        DF_app = rbind(DF_app,temp)
+      }
+      
+      # DF_obs
+      DF_obs = data.frame(group,resid=x_axis,obs=object$obs_path)
+      
+      # Figure
+      Figure =
+        ggplot() +
+        geom_step(data=DF_app,aes(x=resid,y=app,group=group),colour="grey",alpha=0.5) +
+        geom_step(data=DF_obs,aes(x=resid,y=obs),colour="tomato",lwd=0.25) +
+        ylab("Test Statistic")+xlab("Residuals")+ggtitle("Link Function (uUntandardized)") + 
+        scale_y_continuous(breaks = round(seq(min(c(DF_app$app,DF_obs$obs)), max(c(DF_app$app,DF_obs$obs)), length.out = 5),1)) +
+        theme(plot.title=element_text(hjust=0.5))
+    }
+    
+    return(Figure)
+    
+  } else if(testtype=="Form"){
+    resid = c(NA)
+    app = c(NA)
+    obs = c(NA)
+    if (std=="std"){
+      # DF_app
+      DF_app = data.frame()
+      for (group in 1:path){
+        temp = object$app_std_path[[group]]
+        temp = data.frame(group,resid=x_axis,app=temp)
+        DF_app = rbind(DF_app,temp)
+      }
+      
+      # DF_obs
+      DF_obs = data.frame(group,resid=x_axis,obs=object$obs_std_path)
+      
+      # Figure
+      Figure =
+        ggplot() +
+        geom_step(data=DF_app,aes(x=resid,y=app,group=group),colour="grey",alpha=0.5) +
+        geom_step(data=DF_obs,aes(x=resid,y=obs),colour="tomato",lwd=0.25) +
+        ylab("Test Statistic")+xlab("Residuals")+ggtitle("Functional Form (standardized)") + 
+        scale_y_continuous(breaks = round(seq(min(c(DF_app$app,DF_obs$obs)), max(c(DF_app$app,DF_obs$obs)), length.out = 5),1)) +
+        theme(plot.title=element_text(hjust=0.5))
+    } else {
+      # DF_app
+      DF_app = data.frame()
+      for (group in 1:path){
+        temp = object$app_path[[group]]
+        temp = data.frame(group,resid=x_axis,app=temp)
+        DF_app = rbind(DF_app,temp)
+      }
+      
+      # DF_obs
+      DF_obs = data.frame(group,resid=x_axis,obs=object$obs_path)
+      
+      # Figure
+      Figure =
+        ggplot() +
+        geom_step(data=DF_app,aes(x=resid,y=app,group=group),colour="grey",alpha=0.5) +
+        geom_step(data=DF_obs,aes(x=resid,y=obs),colour="tomato",lwd=0.25) +
+        ylab("Test Statistic")+xlab("Residuals")+ggtitle("Functional Form (untandardized)") + 
+        scale_y_continuous(breaks = round(seq(min(c(DF_app$app,DF_obs$obs)), max(c(DF_app$app,DF_obs$obs)), length.out = 5))) +
+        theme(plot.title=element_text(hjust=0.5))
+    }
+    
+    return(Figure)
+    
+  } else {
+    stop("Check your code")
+  }
+}
