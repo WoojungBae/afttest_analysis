@@ -1,10 +1,10 @@
-afttestplot = function(object, path = 50, std = "std"){
+afttestplot = function(object, path = 50, stdType = "std"){
   
   # testtype
   testtype = object$TestType
-  # std
-  if (!std %in% c("std","unstd")) {
-    std = "std"
+  # stdType
+  if (!stdType %in% c("std","unstd")) {
+    stdType = "std"
   }
   # path
   if (!is.numeric(path)) {
@@ -24,7 +24,7 @@ afttestplot = function(object, path = 50, std = "std"){
     obs = matrix(NA)
     
     Figure = list(NA)
-    if (std == "std") {
+    if (stdType ==  "std") {
       for(k in 1:K){
         Q_k = Q[k]
         
@@ -110,7 +110,7 @@ afttestplot = function(object, path = 50, std = "std"){
     resid = c(NA)
     app = c(NA)
     obs = c(NA)
-    if (std=="std"){
+    if (stdType == "std"){
       # DF_app
       DF_app = data.frame()
       for (group in 1:path){
@@ -159,7 +159,7 @@ afttestplot = function(object, path = 50, std = "std"){
     resid = c(NA)
     app = c(NA)
     obs = c(NA)
-    if (std=="std"){
+    if (stdType == "std"){
       # DF_app
       DF_app = data.frame()
       for (group in 1:path){
