@@ -3,11 +3,12 @@
 *.RData
 *.Ruserdata
 *.eps
+*.gitignore
 
 SimulationStudy
-RealDataAnalysis/PBCpaper/figure
-RealDataAnalysis/PBCpackage/figure
-RealDataAnalysis/CGDpackage/figure
+RealDataAnalysis/PBCpaper/figurePBCpaper
+RealDataAnalysis/PBCpackage/figurePBCpackage
+RealDataAnalysis/CGDpackage/figureCGDpackage
 
 afttest_old
 afttest_update
