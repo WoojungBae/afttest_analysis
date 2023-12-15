@@ -1,7 +1,16 @@
-*.Rproj.user
-*.Rhistory
+.DS_Store
+.Rproj.user
+.Rhistory
+.Ruserdata
+
+.Rbuildignore
 *.RData
-*.Ruserdata
+*.Rproj
+*.o
+*.so
+*.dll
+
+*.zip
 *.eps
 
 SimulationStudy
@@ -11,5 +20,3 @@ RealDataAnalysis/CGDpackage/figureCGDpackage
 
 afttest_old
 afttest_update
-
-
