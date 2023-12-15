@@ -10,10 +10,10 @@ library(afttest)
 # Load R code
 source("afttest_source_r.R")
 
-Scenario = 31
+Scenario = 11
 
 # The numer of simulation run per file
-sim_per_file = 4
+sim_per_file = 2
 
 # Type 2 error check
 # gamma_0 = 0
@@ -69,16 +69,16 @@ run_ID = as.integer(Sys.getenv("SLURM_ARRAY_TASK_ID"))
       Z = temp_data$Z
       
       # ------------------------------------ omni ------------------------------------
-      result_omni_mns = afttest(Surv(X, D) ~ Z, path=path,testtype='omni', eqType='mns')
-      result_omni_mis = afttest(Surv(X, D) ~ Z, path=path,testtype='omni', eqType='mis')
+      result_omni_mns = afttest(Surv(X, D) ~ Z, path=path, testType='omni', eqType='mns')
+      result_omni_mis = afttest(Surv(X, D) ~ Z, path=path, testType='omni', eqType='mis')
       
       # ------------------------------------ link ------------------------------------
-      result_link_mns = afttest(Surv(X, D) ~ Z, path=path,testtype='link', eqType='mns')
-      result_link_mis = afttest(Surv(X, D) ~ Z, path=path,testtype='link', eqType='mis')
+      result_link_mns = afttest(Surv(X, D) ~ Z, path=path, testType='link', eqType='mns')
+      result_link_mis = afttest(Surv(X, D) ~ Z, path=path, testType='link', eqType='mis')
       
       # ------------------------------------ form ------------------------------------
-      result_form_mns = afttest(Surv(X, D) ~ Z, path=path,testtype='form', eqType='mns', form = 1)
-      result_form_mis = afttest(Surv(X, D) ~ Z, path=path,testtype='form', eqType='mis', form = 1)
+      result_form_mns = afttest(Surv(X, D) ~ Z, path=path, testType='form', eqType='mns', form = 1)
+      result_form_mis = afttest(Surv(X, D) ~ Z, path=path, testType='form', eqType='mis', form = 1)
       
       # ------------------------------------------------------------------------------
       allinfo = data.frame(run,
@@ -119,16 +119,16 @@ run_ID = as.integer(Sys.getenv("SLURM_ARRAY_TASK_ID"))
       Z2 = Z[,2]
       
       # ------------------------------------ omni ------------------------------------
-      result_omni_mns = afttest(Surv(X, D) ~ Z1 + Z2, path=path,testtype='omni', eqType='mns')
-      result_omni_mis = afttest(Surv(X, D) ~ Z1 + Z2, path=path,testtype='omni', eqType='mis')
+      result_omni_mns = afttest(Surv(X, D) ~ Z1 + Z2, path=path, testType='omni', eqType='mns')
+      result_omni_mis = afttest(Surv(X, D) ~ Z1 + Z2, path=path, testType='omni', eqType='mis')
       
       # ------------------------------------ link ------------------------------------
-      result_link_mns = afttest(Surv(X, D) ~ Z1 + Z2, path=path,testtype='link', eqType='mns')
-      result_link_mis = afttest(Surv(X, D) ~ Z1 + Z2, path=path,testtype='link', eqType='mis')
+      result_link_mns = afttest(Surv(X, D) ~ Z1 + Z2, path=path, testType='link', eqType='mns')
+      result_link_mis = afttest(Surv(X, D) ~ Z1 + Z2, path=path, testType='link', eqType='mis')
       
       # ------------------------------------ form ------------------------------------
-      result_form_mns = afttest(Surv(X, D) ~ Z1 + Z2, path=path,testtype='form', eqType='mns', form = 2)
-      result_form_mis = afttest(Surv(X, D) ~ Z1 + Z2, path=path,testtype='form', eqType='mis', form = 2)
+      result_form_mns = afttest(Surv(X, D) ~ Z1 + Z2, path=path, testType='form', eqType='mns', form = 2)
+      result_form_mis = afttest(Surv(X, D) ~ Z1 + Z2, path=path, testType='form', eqType='mis', form = 2)
       
       # ------------------------------------------------------------------------------
       allinfo = data.frame(run,
@@ -194,16 +194,16 @@ run_ID = as.integer(Sys.getenv("SLURM_ARRAY_TASK_ID"))
       Z = temp_data$Z
       
       # ------------------------------------ omni ------------------------------------
-      result_omni_mns = afttest(Surv(X, D) ~ Z, path=path,testtype='omni', eqType='mns')
-      result_omni_mis = afttest(Surv(X, D) ~ Z, path=path,testtype='omni', eqType='mis')
+      result_omni_mns = afttest(Surv(X, D) ~ Z, path=path, testType='omni', eqType='mns')
+      result_omni_mis = afttest(Surv(X, D) ~ Z, path=path, testType='omni', eqType='mis')
       
       # ------------------------------------ link ------------------------------------
-      result_link_mns = afttest(Surv(X, D) ~ Z, path=path,testtype='link', eqType='mns')
-      result_link_mis = afttest(Surv(X, D) ~ Z, path=path,testtype='link', eqType='mis')
+      result_link_mns = afttest(Surv(X, D) ~ Z, path=path, testType='link', eqType='mns')
+      result_link_mis = afttest(Surv(X, D) ~ Z, path=path, testType='link', eqType='mis')
       
       # ------------------------------------ form ------------------------------------
-      result_form_mns = afttest(Surv(X, D) ~ Z, path=path,testtype='form', eqType='mns', form = 1)
-      result_form_mis = afttest(Surv(X, D) ~ Z, path=path,testtype='form', eqType='mis', form = 1)
+      result_form_mns = afttest(Surv(X, D) ~ Z, path=path, testType='form', eqType='mns', form = 1)
+      result_form_mis = afttest(Surv(X, D) ~ Z, path=path, testType='form', eqType='mis', form = 1)
       
       # ------------------------------------------------------------------------------
       allinfo = data.frame(run,
@@ -244,16 +244,16 @@ run_ID = as.integer(Sys.getenv("SLURM_ARRAY_TASK_ID"))
       Z2 = Z[,2]
       
       # ------------------------------------ omni ------------------------------------
-      result_omni_mns = afttest(Surv(X, D) ~ Z1 + Z2, path=path,testtype='omni', eqType='mns')
-      result_omni_mis = afttest(Surv(X, D) ~ Z1 + Z2, path=path,testtype='omni', eqType='mis')
+      result_omni_mns = afttest(Surv(X, D) ~ Z1 + Z2, path=path, testType='omni', eqType='mns')
+      result_omni_mis = afttest(Surv(X, D) ~ Z1 + Z2, path=path, testType='omni', eqType='mis')
       
       # ------------------------------------ link ------------------------------------
-      result_link_mns = afttest(Surv(X, D) ~ Z1 + Z2, path=path,testtype='link', eqType='mns')
-      result_link_mis = afttest(Surv(X, D) ~ Z1 + Z2, path=path,testtype='link', eqType='mis')
+      result_link_mns = afttest(Surv(X, D) ~ Z1 + Z2, path=path, testType='link', eqType='mns')
+      result_link_mis = afttest(Surv(X, D) ~ Z1 + Z2, path=path, testType='link', eqType='mis')
       
       # ------------------------------------ form ------------------------------------
-      result_form_mns = afttest(Surv(X, D) ~ Z1 + Z2, path=path,testtype='form', eqType='mns', form = 2)
-      result_form_mis = afttest(Surv(X, D) ~ Z1 + Z2, path=path,testtype='form', eqType='mis', form = 2)
+      result_form_mns = afttest(Surv(X, D) ~ Z1 + Z2, path=path, testType='form', eqType='mns', form = 2)
+      result_form_mis = afttest(Surv(X, D) ~ Z1 + Z2, path=path, testType='form', eqType='mis', form = 2)
       
       # ------------------------------------------------------------------------------
       allinfo = data.frame(run,
@@ -319,16 +319,16 @@ run_ID = as.integer(Sys.getenv("SLURM_ARRAY_TASK_ID"))
       Z = temp_data$Z
       
       # ------------------------------------ omni ------------------------------------
-      result_omni_mns = afttest(Surv(X, D) ~ Z, path=path,testtype='omni', eqType='mns')
-      result_omni_mis = afttest(Surv(X, D) ~ Z, path=path,testtype='omni', eqType='mis')
+      result_omni_mns = afttest(Surv(X, D) ~ Z, path=path, testType='omni', eqType='mns')
+      result_omni_mis = afttest(Surv(X, D) ~ Z, path=path, testType='omni', eqType='mis')
       
       # ------------------------------------ link ------------------------------------
-      result_link_mns = afttest(Surv(X, D) ~ Z, path=path,testtype='link', eqType='mns')
-      result_link_mis = afttest(Surv(X, D) ~ Z, path=path,testtype='link', eqType='mis')
+      result_link_mns = afttest(Surv(X, D) ~ Z, path=path, testType='link', eqType='mns')
+      result_link_mis = afttest(Surv(X, D) ~ Z, path=path, testType='link', eqType='mis')
       
       # ------------------------------------ form ------------------------------------
-      result_form_mns = afttest(Surv(X, D) ~ Z, path=path,testtype='form', eqType='mns', form = 1)
-      result_form_mis = afttest(Surv(X, D) ~ Z, path=path,testtype='form', eqType='mis', form = 1)
+      result_form_mns = afttest(Surv(X, D) ~ Z, path=path, testType='form', eqType='mns', form = 1)
+      result_form_mis = afttest(Surv(X, D) ~ Z, path=path, testType='form', eqType='mis', form = 1)
       
       # ------------------------------------------------------------------------------
       allinfo = data.frame(run,
@@ -369,16 +369,16 @@ run_ID = as.integer(Sys.getenv("SLURM_ARRAY_TASK_ID"))
       Z2 = Z[,2]
       
       # ------------------------------------ omni ------------------------------------
-      result_omni_mns = afttest(Surv(X, D) ~ Z1 + Z2, path=path,testtype='omni', eqType='mns')
-      result_omni_mis = afttest(Surv(X, D) ~ Z1 + Z2, path=path,testtype='omni', eqType='mis')
+      result_omni_mns = afttest(Surv(X, D) ~ Z1 + Z2, path=path, testType='omni', eqType='mns')
+      result_omni_mis = afttest(Surv(X, D) ~ Z1 + Z2, path=path, testType='omni', eqType='mis')
       
       # ------------------------------------ link ------------------------------------
-      result_link_mns = afttest(Surv(X, D) ~ Z1 + Z2, path=path,testtype='link', eqType='mns')
-      result_link_mis = afttest(Surv(X, D) ~ Z1 + Z2, path=path,testtype='link', eqType='mis')
+      result_link_mns = afttest(Surv(X, D) ~ Z1 + Z2, path=path, testType='link', eqType='mns')
+      result_link_mis = afttest(Surv(X, D) ~ Z1 + Z2, path=path, testType='link', eqType='mis')
       
       # ------------------------------------ form ------------------------------------
-      result_form_mns = afttest(Surv(X, D) ~ Z1 + Z2, path=path,testtype='form', eqType='mns', form = 2)
-      result_form_mis = afttest(Surv(X, D) ~ Z1 + Z2, path=path,testtype='form', eqType='mis', form = 2)
+      result_form_mns = afttest(Surv(X, D) ~ Z1 + Z2, path=path, testType='form', eqType='mns', form = 2)
+      result_form_mis = afttest(Surv(X, D) ~ Z1 + Z2, path=path, testType='form', eqType='mis', form = 2)
       
       # ------------------------------------------------------------------------------
       allinfo = data.frame(run,
