@@ -31,8 +31,6 @@ library(kableExtra)
 #-------------------------------------------------------------
 set.seed(1)
 
-path = 200
-
 D_pbc = pbc$status; D_pbc[which(D_pbc==1)]=0; D_pbc[which(D_pbc==2)]=1
 X_pbc = pbc$time
 X_pbc = X_pbc + runif(length(X_pbc))/1e4
@@ -53,39 +51,39 @@ albu = pbc$albu; log_albu=log(albu)
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result01_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem+trt,path=path,testType="omni",eqType="mns")
+# result01_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem+trt,path=200,testType="omni",eqType="mns")
 result01_afttest_omni_mns$p_value
 result01_afttest_omni_mns$p_std_value
 # afttestplot(result01_afttest_omni_mns,stdType="unstd")
 # afttestplot(result01_afttest_omni_mns,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result01_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem+trt,path=path,testType="link",eqType="mns")
+# result01_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem+trt,path=200,testType="link",eqType="mns")
 result01_afttest_link_mns$p_value
 result01_afttest_link_mns$p_std_value
 # afttestplot(result01_afttest_link_mns,stdType="unstd")
 # afttestplot(result01_afttest_link_mns,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result01_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem+trt,path=path,testType="form",eqType="mns",form="bili")
+# result01_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem+trt,path=200,testType="form",eqType="mns",form="bili")
 result01_afttest_form1_mns$p_value
 result01_afttest_form1_mns$p_std_value
 # afttestplot(result01_afttest_form1_mns,stdType="unstd")
 # afttestplot(result01_afttest_form1_mns,stdType="std")
 
-# result01_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem+trt,path=path,testType="form",eqType="mns",form="prot")
+# result01_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem+trt,path=200,testType="form",eqType="mns",form="prot")
 result01_afttest_form2_mns$p_value
 result01_afttest_form2_mns$p_std_value
 # afttestplot(result01_afttest_form2_mns,stdType="unstd")
 # afttestplot(result01_afttest_form2_mns,stdType="std")
 
-# result01_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem+trt,path=path,testType="form",eqType="mns",form="albu")
+# result01_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem+trt,path=200,testType="form",eqType="mns",form="albu")
 result01_afttest_form3_mns$p_value
 result01_afttest_form3_mns$p_std_value
 # afttestplot(result01_afttest_form3_mns,stdType="unstd")
 # afttestplot(result01_afttest_form3_mns,stdType="std")
 
-# result01_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem+trt,path=path,testType="form",eqType="mns",form="age")
+# result01_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem+trt,path=200,testType="form",eqType="mns",form="age")
 result01_afttest_form4_mns$p_value
 result01_afttest_form4_mns$p_std_value
 # afttestplot(result01_afttest_form4_mns,stdType="unstd")
@@ -96,39 +94,39 @@ result01_afttest_form4_mns$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result02_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem+trt,path=path,testType="omni",eqType="mns")
+# result02_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem+trt,path=200,testType="omni",eqType="mns")
 result02_afttest_omni_mns$p_value
 result02_afttest_omni_mns$p_std_value
 # afttestplot(result02_afttest_omni_mns,stdType="unstd")
 # afttestplot(result02_afttest_omni_mns,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result02_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem+trt,path=path,testType="link",eqType="mns")
+# result02_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem+trt,path=200,testType="link",eqType="mns")
 result02_afttest_link_mns$p_value
 result02_afttest_link_mns$p_std_value
 # afttestplot(result02_afttest_link_mns,stdType="unstd")
 # afttestplot(result02_afttest_link_mns,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result02_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem+trt,path=path,testType="form",eqType="mns",form="log_bili")
+# result02_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem+trt,path=200,testType="form",eqType="mns",form="log_bili")
 result02_afttest_form1_mns$p_value
 result02_afttest_form1_mns$p_std_value
 # afttestplot(result02_afttest_form1_mns,stdType="unstd")
 # afttestplot(result02_afttest_form1_mns,stdType="std")
 
-# result02_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem+trt,path=path,testType="form",eqType="mns",form="prot")
+# result02_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem+trt,path=200,testType="form",eqType="mns",form="prot")
 result02_afttest_form2_mns$p_value
 result02_afttest_form2_mns$p_std_value
 # afttestplot(result02_afttest_form2_mns,stdType="unstd")
 # afttestplot(result02_afttest_form2_mns,stdType="std")
 
-# result02_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem+trt,path=path,testType="form",eqType="mns",form="albu")
+# result02_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem+trt,path=200,testType="form",eqType="mns",form="albu")
 result02_afttest_form3_mns$p_value
 result02_afttest_form3_mns$p_std_value
 # afttestplot(result02_afttest_form3_mns,stdType="unstd")
 # afttestplot(result02_afttest_form3_mns,stdType="std")
 
-# result02_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem+trt,path=path,testType="form",eqType="mns",form="age")
+# result02_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem+trt,path=200,testType="form",eqType="mns",form="age")
 result02_afttest_form4_mns$p_value
 result02_afttest_form4_mns$p_std_value
 # afttestplot(result02_afttest_form4_mns,stdType="unstd")
@@ -139,39 +137,39 @@ result02_afttest_form4_mns$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result03_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+age+edem+trt,path=path,testType="omni",eqType="mns")
+# result03_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+age+edem+trt,path=200,testType="omni",eqType="mns")
 result03_afttest_omni_mns$p_value
 result03_afttest_omni_mns$p_std_value
 # afttestplot(result03_afttest_omni_mns,stdType="unstd")
 # afttestplot(result03_afttest_omni_mns,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result03_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+age+edem+trt,path=path,testType="link",eqType="mns")
+# result03_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+age+edem+trt,path=200,testType="link",eqType="mns")
 result03_afttest_link_mns$p_value
 result03_afttest_link_mns$p_std_value
 # afttestplot(result03_afttest_link_mns,stdType="unstd")
 # afttestplot(result03_afttest_link_mns,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result03_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+age+edem+trt,path=path,testType="form",eqType="mns",form="bili")
+# result03_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+age+edem+trt,path=200,testType="form",eqType="mns",form="bili")
 result03_afttest_form1_mns$p_value
 result03_afttest_form1_mns$p_std_value
 # afttestplot(result03_afttest_form1_mns,stdType="unstd")
 # afttestplot(result03_afttest_form1_mns,stdType="std")
 
-# result03_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+age+edem+trt,path=path,testType="form",eqType="mns",form="log_prot")
+# result03_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+age+edem+trt,path=200,testType="form",eqType="mns",form="log_prot")
 result03_afttest_form2_mns$p_value
 result03_afttest_form2_mns$p_std_value
 # afttestplot(result03_afttest_form2_mns,stdType="unstd")
 # afttestplot(result03_afttest_form2_mns,stdType="std")
 
-# result03_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+age+edem+trt,path=path,testType="form",eqType="mns",form="albu")
+# result03_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+age+edem+trt,path=200,testType="form",eqType="mns",form="albu")
 result03_afttest_form3_mns$p_value
 result03_afttest_form3_mns$p_std_value
 # afttestplot(result03_afttest_form3_mns,stdType="unstd")
 # afttestplot(result03_afttest_form3_mns,stdType="std")
 
-# result03_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+age+edem+trt,path=path,testType="form",eqType="mns",form="age")
+# result03_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+age+edem+trt,path=200,testType="form",eqType="mns",form="age")
 result03_afttest_form4_mns$p_value
 result03_afttest_form4_mns$p_std_value
 # afttestplot(result03_afttest_form4_mns,stdType="unstd")
@@ -182,39 +180,39 @@ result03_afttest_form4_mns$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result04_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+age+edem+trt,path=path,testType="omni",eqType="mns")
+# result04_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+age+edem+trt,path=200,testType="omni",eqType="mns")
 result04_afttest_omni_mns$p_value
 result04_afttest_omni_mns$p_std_value
 # afttestplot(result04_afttest_omni_mns,stdType="unstd")
 # afttestplot(result04_afttest_omni_mns,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result04_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+age+edem+trt,path=path,testType="link",eqType="mns")
+# result04_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+age+edem+trt,path=200,testType="link",eqType="mns")
 result04_afttest_link_mns$p_value
 result04_afttest_link_mns$p_std_value
 # afttestplot(result04_afttest_link_mns,stdType="unstd")
 # afttestplot(result04_afttest_link_mns,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result04_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mns",form="bili")
+# result04_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mns",form="bili")
 result04_afttest_form1_mns$p_value
 result04_afttest_form1_mns$p_std_value
 # afttestplot(result04_afttest_form1_mns,stdType="unstd")
 # afttestplot(result04_afttest_form1_mns,stdType="std")
 
-# result04_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mns",form="prot")
+# result04_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mns",form="prot")
 result04_afttest_form2_mns$p_value
 result04_afttest_form2_mns$p_std_value
 # afttestplot(result04_afttest_form2_mns,stdType="unstd")
 # afttestplot(result04_afttest_form2_mns,stdType="std")
 
-# result04_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mns",form="log_albu")
+# result04_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mns",form="log_albu")
 result04_afttest_form3_mns$p_value
 result04_afttest_form3_mns$p_std_value
 # afttestplot(result04_afttest_form3_mns,stdType="unstd")
 # afttestplot(result04_afttest_form3_mns,stdType="std")
 
-# result04_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mns",form="age")
+# result04_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mns",form="age")
 result04_afttest_form4_mns$p_value
 result04_afttest_form4_mns$p_std_value
 # afttestplot(result04_afttest_form4_mns,stdType="unstd")
@@ -225,39 +223,39 @@ result04_afttest_form4_mns$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result05_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+log_age+edem+trt,path=path,testType="omni",eqType="mns")
+# result05_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+log_age+edem+trt,path=200,testType="omni",eqType="mns")
 result05_afttest_omni_mns$p_value
 result05_afttest_omni_mns$p_std_value
 # afttestplot(result05_afttest_omni_mns,stdType="unstd")
 # afttestplot(result05_afttest_omni_mns,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result05_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+log_age+edem+trt,path=path,testType="link",eqType="mns")
+# result05_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+log_age+edem+trt,path=200,testType="link",eqType="mns")
 result05_afttest_link_mns$p_value
 result05_afttest_link_mns$p_std_value
 # afttestplot(result05_afttest_link_mns,stdType="unstd")
 # afttestplot(result05_afttest_link_mns,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result05_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="bili")
+# result05_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="bili")
 result05_afttest_form1_mns$p_value
 result05_afttest_form1_mns$p_std_value
 # afttestplot(result05_afttest_form1_mns,stdType="unstd")
 # afttestplot(result05_afttest_form1_mns,stdType="std")
 
-# result05_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="prot")
+# result05_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="prot")
 result05_afttest_form2_mns$p_value
 result05_afttest_form2_mns$p_std_value
 # afttestplot(result05_afttest_form2_mns,stdType="unstd")
 # afttestplot(result05_afttest_form2_mns,stdType="std")
 
-# result05_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="albu")
+# result05_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="albu")
 result05_afttest_form3_mns$p_value
 result05_afttest_form3_mns$p_std_value
 # afttestplot(result05_afttest_form3_mns,stdType="unstd")
 # afttestplot(result05_afttest_form3_mns,stdType="std")
 
-# result05_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="log_age")
+# result05_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="log_age")
 result05_afttest_form4_mns$p_value
 result05_afttest_form4_mns$p_std_value
 # afttestplot(result05_afttest_form4_mns,stdType="unstd")
@@ -268,39 +266,39 @@ result05_afttest_form4_mns$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result06_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+age+edem+trt,path=path,testType="omni",eqType="mns")
+# result06_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+age+edem+trt,path=200,testType="omni",eqType="mns")
 result06_afttest_omni_mns$p_value
 result06_afttest_omni_mns$p_std_value
 # afttestplot(result06_afttest_omni_mns,stdType="unstd")
 # afttestplot(result06_afttest_omni_mns,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result06_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+age+edem+trt,path=path,testType="link",eqType="mns")
+# result06_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+age+edem+trt,path=200,testType="link",eqType="mns")
 result06_afttest_link_mns$p_value
 result06_afttest_link_mns$p_std_value
 # afttestplot(result06_afttest_link_mns,stdType="unstd")
 # afttestplot(result06_afttest_link_mns,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result06_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+age+edem+trt,path=path,testType="form",eqType="mns",form="log_bili")
+# result06_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+age+edem+trt,path=200,testType="form",eqType="mns",form="log_bili")
 result06_afttest_form1_mns$p_value
 result06_afttest_form1_mns$p_std_value
 # afttestplot(result06_afttest_form1_mns,stdType="unstd")
 # afttestplot(result06_afttest_form1_mns,stdType="std")
 
-# result06_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+age+edem+trt,path=path,testType="form",eqType="mns",form="log_prot")
+# result06_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+age+edem+trt,path=200,testType="form",eqType="mns",form="log_prot")
 result06_afttest_form2_mns$p_value
 result06_afttest_form2_mns$p_std_value
 # afttestplot(result06_afttest_form2_mns,stdType="unstd")
 # afttestplot(result06_afttest_form2_mns,stdType="std")
 
-# result06_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+age+edem+trt,path=path,testType="form",eqType="mns",form="albu")
+# result06_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+age+edem+trt,path=200,testType="form",eqType="mns",form="albu")
 result06_afttest_form3_mns$p_value
 result06_afttest_form3_mns$p_std_value
 # afttestplot(result06_afttest_form3_mns,stdType="unstd")
 # afttestplot(result06_afttest_form3_mns,stdType="std")
 
-# result06_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+age+edem+trt,path=path,testType="form",eqType="mns",form="age")
+# result06_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+age+edem+trt,path=200,testType="form",eqType="mns",form="age")
 result06_afttest_form4_mns$p_value
 result06_afttest_form4_mns$p_std_value
 # afttestplot(result06_afttest_form4_mns,stdType="unstd")
@@ -311,39 +309,39 @@ result06_afttest_form4_mns$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result07_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+age+edem+trt,path=path,testType="omni",eqType="mns")
+# result07_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+age+edem+trt,path=200,testType="omni",eqType="mns")
 result07_afttest_omni_mns$p_value
 result07_afttest_omni_mns$p_std_value
 # afttestplot(result07_afttest_omni_mns,stdType="unstd")
 # afttestplot(result07_afttest_omni_mns,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result07_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+age+edem+trt,path=path,testType="link",eqType="mns")
+# result07_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+age+edem+trt,path=200,testType="link",eqType="mns")
 result07_afttest_link_mns$p_value
 result07_afttest_link_mns$p_std_value
 # afttestplot(result07_afttest_link_mns,stdType="unstd")
 # afttestplot(result07_afttest_link_mns,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result07_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mns",form="log_bili")
+# result07_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mns",form="log_bili")
 result07_afttest_form1_mns$p_value
 result07_afttest_form1_mns$p_std_value
 # afttestplot(result07_afttest_form1_mns,stdType="unstd")
 # afttestplot(result07_afttest_form1_mns,stdType="std")
 
-# result07_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mns",form="prot")
+# result07_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mns",form="prot")
 result07_afttest_form2_mns$p_value
 result07_afttest_form2_mns$p_std_value
 # afttestplot(result07_afttest_form2_mns,stdType="unstd")
 # afttestplot(result07_afttest_form2_mns,stdType="std")
 
-# result07_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mns",form="log_albu")
+# result07_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mns",form="log_albu")
 result07_afttest_form3_mns$p_value
 result07_afttest_form3_mns$p_std_value
 # afttestplot(result07_afttest_form3_mns,stdType="unstd")
 # afttestplot(result07_afttest_form3_mns,stdType="std")
 
-# result07_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mns",form="age")
+# result07_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mns",form="age")
 result07_afttest_form4_mns$p_value
 result07_afttest_form4_mns$p_std_value
 # afttestplot(result07_afttest_form4_mns,stdType="unstd")
@@ -354,39 +352,39 @@ result07_afttest_form4_mns$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result08_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+log_age+edem+trt,path=path,testType="omni",eqType="mns")
+# result08_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+log_age+edem+trt,path=200,testType="omni",eqType="mns")
 result08_afttest_omni_mns$p_value
 result08_afttest_omni_mns$p_std_value
 # afttestplot(result08_afttest_omni_mns,stdType="unstd")
 # afttestplot(result08_afttest_omni_mns,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result08_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+log_age+edem+trt,path=path,testType="link",eqType="mns")
+# result08_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+log_age+edem+trt,path=200,testType="link",eqType="mns")
 result08_afttest_link_mns$p_value
 result08_afttest_link_mns$p_std_value
 # afttestplot(result08_afttest_link_mns,stdType="unstd")
 # afttestplot(result08_afttest_link_mns,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result08_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="log_bili")
+# result08_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="log_bili")
 result08_afttest_form1_mns$p_value
 result08_afttest_form1_mns$p_std_value
 # afttestplot(result08_afttest_form1_mns,stdType="unstd")
 # afttestplot(result08_afttest_form1_mns,stdType="std")
 
-# result08_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="prot")
+# result08_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="prot")
 result08_afttest_form2_mns$p_value
 result08_afttest_form2_mns$p_std_value
 # afttestplot(result08_afttest_form2_mns,stdType="unstd")
 # afttestplot(result08_afttest_form2_mns,stdType="std")
 
-# result08_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="albu")
+# result08_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="albu")
 result08_afttest_form3_mns$p_value
 result08_afttest_form3_mns$p_std_value
 # afttestplot(result08_afttest_form3_mns,stdType="unstd")
 # afttestplot(result08_afttest_form3_mns,stdType="std")
 
-# result08_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="log_age")
+# result08_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="log_age")
 result08_afttest_form4_mns$p_value
 result08_afttest_form4_mns$p_std_value
 # afttestplot(result08_afttest_form4_mns,stdType="unstd")
@@ -397,39 +395,39 @@ result08_afttest_form4_mns$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result09_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+age+edem+trt,path=path,testType="omni",eqType="mns")
+# result09_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+age+edem+trt,path=200,testType="omni",eqType="mns")
 result09_afttest_omni_mns$p_value
 result09_afttest_omni_mns$p_std_value
 # afttestplot(result09_afttest_omni_mns,stdType="unstd")
 # afttestplot(result09_afttest_omni_mns,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result09_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+age+edem+trt,path=path,testType="link",eqType="mns")
+# result09_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+age+edem+trt,path=200,testType="link",eqType="mns")
 result09_afttest_link_mns$p_value
 result09_afttest_link_mns$p_std_value
 # afttestplot(result09_afttest_link_mns,stdType="unstd")
 # afttestplot(result09_afttest_link_mns,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result09_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mns",form="bili")
+# result09_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mns",form="bili")
 result09_afttest_form1_mns$p_value
 result09_afttest_form1_mns$p_std_value
 # afttestplot(result09_afttest_form1_mns,stdType="unstd")
 # afttestplot(result09_afttest_form1_mns,stdType="std")
 
-# result09_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mns",form="log_prot")
+# result09_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mns",form="log_prot")
 result09_afttest_form2_mns$p_value
 result09_afttest_form2_mns$p_std_value
 # afttestplot(result09_afttest_form2_mns,stdType="unstd")
 # afttestplot(result09_afttest_form2_mns,stdType="std")
 
-# result09_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mns",form="log_albu")
+# result09_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mns",form="log_albu")
 result09_afttest_form3_mns$p_value
 result09_afttest_form3_mns$p_std_value
 # afttestplot(result09_afttest_form3_mns,stdType="unstd")
 # afttestplot(result09_afttest_form3_mns,stdType="std")
 
-# result09_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mns",form="age")
+# result09_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mns",form="age")
 result09_afttest_form4_mns$p_value
 result09_afttest_form4_mns$p_std_value
 # afttestplot(result09_afttest_form4_mns,stdType="unstd")
@@ -440,39 +438,39 @@ result09_afttest_form4_mns$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result10_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+log_age+edem+trt,path=path,testType="omni",eqType="mns")
+# result10_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+log_age+edem+trt,path=200,testType="omni",eqType="mns")
 result10_afttest_omni_mns$p_value
 result10_afttest_omni_mns$p_std_value
 # afttestplot(result10_afttest_omni_mns,stdType="unstd")
 # afttestplot(result10_afttest_omni_mns,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result10_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+log_age+edem+trt,path=path,testType="link",eqType="mns")
+# result10_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+log_age+edem+trt,path=200,testType="link",eqType="mns")
 result10_afttest_link_mns$p_value
 result10_afttest_link_mns$p_std_value
 # afttestplot(result10_afttest_link_mns,stdType="unstd")
 # afttestplot(result10_afttest_link_mns,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result10_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="bili")
+# result10_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="bili")
 result10_afttest_form1_mns$p_value
 result10_afttest_form1_mns$p_std_value
 # afttestplot(result10_afttest_form1_mns,stdType="unstd")
 # afttestplot(result10_afttest_form1_mns,stdType="std")
 
-# result10_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="log_prot")
+# result10_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="log_prot")
 result10_afttest_form2_mns$p_value
 result10_afttest_form2_mns$p_std_value
 # afttestplot(result10_afttest_form2_mns,stdType="unstd")
 # afttestplot(result10_afttest_form2_mns,stdType="std")
 
-# result10_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="albu")
+# result10_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="albu")
 result10_afttest_form3_mns$p_value
 result10_afttest_form3_mns$p_std_value
 # afttestplot(result10_afttest_form3_mns,stdType="unstd")
 # afttestplot(result10_afttest_form3_mns,stdType="std")
 
-# result10_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="log_age")
+# result10_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="log_age")
 result10_afttest_form4_mns$p_value
 result10_afttest_form4_mns$p_std_value
 # afttestplot(result10_afttest_form4_mns,stdType="unstd")
@@ -483,39 +481,39 @@ result10_afttest_form4_mns$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result11_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+log_age+edem+trt,path=path,testType="omni",eqType="mns")
+# result11_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+log_age+edem+trt,path=200,testType="omni",eqType="mns")
 result11_afttest_omni_mns$p_value
 result11_afttest_omni_mns$p_std_value
 # afttestplot(result11_afttest_omni_mns,stdType="unstd")
 # afttestplot(result11_afttest_omni_mns,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result11_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+log_age+edem+trt,path=path,testType="link",eqType="mns")
+# result11_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+log_age+edem+trt,path=200,testType="link",eqType="mns")
 result11_afttest_link_mns$p_value
 result11_afttest_link_mns$p_std_value
 # afttestplot(result11_afttest_link_mns,stdType="unstd")
 # afttestplot(result11_afttest_link_mns,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result11_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="bili")
+# result11_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="bili")
 result11_afttest_form1_mns$p_value
 result11_afttest_form1_mns$p_std_value
 # afttestplot(result11_afttest_form1_mns,stdType="unstd")
 # afttestplot(result11_afttest_form1_mns,stdType="std")
 
-# result11_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="prot")
+# result11_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="prot")
 result11_afttest_form2_mns$p_value
 result11_afttest_form2_mns$p_std_value
 # afttestplot(result11_afttest_form2_mns,stdType="unstd")
 # afttestplot(result11_afttest_form2_mns,stdType="std")
 
-# result11_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="log_albu")
+# result11_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="log_albu")
 result11_afttest_form3_mns$p_value
 result11_afttest_form3_mns$p_std_value
 # afttestplot(result11_afttest_form3_mns,stdType="unstd")
 # afttestplot(result11_afttest_form3_mns,stdType="std")
 
-# result11_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="log_age")
+# result11_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="log_age")
 result11_afttest_form4_mns$p_value
 result11_afttest_form4_mns$p_std_value
 # afttestplot(result11_afttest_form4_mns,stdType="unstd")
@@ -526,39 +524,39 @@ result11_afttest_form4_mns$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result12_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+age+edem+trt,path=path,testType="omni",eqType="mns")
+# result12_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+age+edem+trt,path=200,testType="omni",eqType="mns")
 result12_afttest_omni_mns$p_value
 result12_afttest_omni_mns$p_std_value
 # afttestplot(result12_afttest_omni_mns,stdType="unstd")
 # afttestplot(result12_afttest_omni_mns,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result12_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+age+edem+trt,path=path,testType="link",eqType="mns")
+# result12_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+age+edem+trt,path=200,testType="link",eqType="mns")
 result12_afttest_link_mns$p_value
 result12_afttest_link_mns$p_std_value
 # afttestplot(result12_afttest_link_mns,stdType="unstd")
 # afttestplot(result12_afttest_link_mns,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result12_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mns",form="log_bili")
+# result12_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mns",form="log_bili")
 result12_afttest_form1_mns$p_value
 result12_afttest_form1_mns$p_std_value
 # afttestplot(result12_afttest_form1_mns,stdType="unstd")
 # afttestplot(result12_afttest_form1_mns,stdType="std")
 
-# result12_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mns",form="log_prot")
+# result12_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mns",form="log_prot")
 result12_afttest_form2_mns$p_value
 result12_afttest_form2_mns$p_std_value
 # afttestplot(result12_afttest_form2_mns,stdType="unstd")
 # afttestplot(result12_afttest_form2_mns,stdType="std")
 
-# result12_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mns",form="log_albu")
+# result12_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mns",form="log_albu")
 result12_afttest_form3_mns$p_value
 result12_afttest_form3_mns$p_std_value
 # afttestplot(result12_afttest_form3_mns,stdType="unstd")
 # afttestplot(result12_afttest_form3_mns,stdType="std")
 
-# result12_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mns",form="age")
+# result12_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mns",form="age")
 result12_afttest_form4_mns$p_value
 result12_afttest_form4_mns$p_std_value
 # afttestplot(result12_afttest_form4_mns,stdType="unstd")
@@ -569,39 +567,39 @@ result12_afttest_form4_mns$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result13_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+log_age+edem+trt,path=path,testType="omni",eqType="mns")
+# result13_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+log_age+edem+trt,path=200,testType="omni",eqType="mns")
 result13_afttest_omni_mns$p_value
 result13_afttest_omni_mns$p_std_value
 # afttestplot(result13_afttest_omni_mns,stdType="unstd")
 # afttestplot(result13_afttest_omni_mns,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result13_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+log_age+edem+trt,path=path,testType="link",eqType="mns")
+# result13_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+log_age+edem+trt,path=200,testType="link",eqType="mns")
 result13_afttest_link_mns$p_value
 result13_afttest_link_mns$p_std_value
 # afttestplot(result13_afttest_link_mns,stdType="unstd")
 # afttestplot(result13_afttest_link_mns,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result13_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="log_bili")
+# result13_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="log_bili")
 result13_afttest_form1_mns$p_value
 result13_afttest_form1_mns$p_std_value
 # afttestplot(result13_afttest_form1_mns,stdType="unstd")
 # afttestplot(result13_afttest_form1_mns,stdType="std")
 
-# result13_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="log_prot")
+# result13_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="log_prot")
 result13_afttest_form2_mns$p_value
 result13_afttest_form2_mns$p_std_value
 # afttestplot(result13_afttest_form2_mns,stdType="unstd")
 # afttestplot(result13_afttest_form2_mns,stdType="std")
 
-# result13_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="albu")
+# result13_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="albu")
 result13_afttest_form3_mns$p_value
 result13_afttest_form3_mns$p_std_value
 # afttestplot(result13_afttest_form3_mns,stdType="unstd")
 # afttestplot(result13_afttest_form3_mns,stdType="std")
 
-# result13_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="log_age")
+# result13_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="log_age")
 result13_afttest_form4_mns$p_value
 result13_afttest_form4_mns$p_std_value
 # afttestplot(result13_afttest_form4_mns,stdType="unstd")
@@ -612,39 +610,39 @@ result13_afttest_form4_mns$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result14_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+log_age+edem+trt,path=path,testType="omni",eqType="mns")
+# result14_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+log_age+edem+trt,path=200,testType="omni",eqType="mns")
 result14_afttest_omni_mns$p_value
 result14_afttest_omni_mns$p_std_value
 # afttestplot(result14_afttest_omni_mns,stdType="unstd")
 # afttestplot(result14_afttest_omni_mns,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result14_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+log_age+edem+trt,path=path,testType="link",eqType="mns")
+# result14_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+log_age+edem+trt,path=200,testType="link",eqType="mns")
 result14_afttest_link_mns$p_value
 result14_afttest_link_mns$p_std_value
 # afttestplot(result14_afttest_link_mns,stdType="unstd")
 # afttestplot(result14_afttest_link_mns,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result14_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="log_bili")
+# result14_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="log_bili")
 result14_afttest_form1_mns$p_value
 result14_afttest_form1_mns$p_std_value
 # afttestplot(result14_afttest_form1_mns,stdType="unstd")
 # afttestplot(result14_afttest_form1_mns,stdType="std")
 
-# result14_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="prot")
+# result14_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="prot")
 result14_afttest_form2_mns$p_value
 result14_afttest_form2_mns$p_std_value
 # afttestplot(result14_afttest_form2_mns,stdType="unstd")
 # afttestplot(result14_afttest_form2_mns,stdType="std")
 
-# result14_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="log_albu")
+# result14_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="log_albu")
 result14_afttest_form3_mns$p_value
 result14_afttest_form3_mns$p_std_value
 # afttestplot(result14_afttest_form3_mns,stdType="unstd")
 # afttestplot(result14_afttest_form3_mns,stdType="std")
 
-# result14_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="log_age")
+# result14_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="log_age")
 result14_afttest_form4_mns$p_value
 result14_afttest_form4_mns$p_std_value
 # afttestplot(result14_afttest_form4_mns,stdType="unstd")
@@ -655,39 +653,39 @@ result14_afttest_form4_mns$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result15_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+log_age+edem+trt,path=path,testType="omni",eqType="mns")
+# result15_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+log_age+edem+trt,path=200,testType="omni",eqType="mns")
 result15_afttest_omni_mns$p_value
 result15_afttest_omni_mns$p_std_value
 # afttestplot(result15_afttest_omni_mns,stdType="unstd")
 # afttestplot(result15_afttest_omni_mns,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result15_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+log_age+edem+trt,path=path,testType="link",eqType="mns")
+# result15_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+log_age+edem+trt,path=200,testType="link",eqType="mns")
 result15_afttest_link_mns$p_value
 result15_afttest_link_mns$p_std_value
 # afttestplot(result15_afttest_link_mns,stdType="unstd")
 # afttestplot(result15_afttest_link_mns,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result15_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="bili")
+# result15_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="bili")
 result15_afttest_form1_mns$p_value
 result15_afttest_form1_mns$p_std_value
 # afttestplot(result15_afttest_form1_mns,stdType="unstd")
 # afttestplot(result15_afttest_form1_mns,stdType="std")
 
-# result15_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="log_prot")
+# result15_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="log_prot")
 result15_afttest_form2_mns$p_value
 result15_afttest_form2_mns$p_std_value
 # afttestplot(result15_afttest_form2_mns,stdType="unstd")
 # afttestplot(result15_afttest_form2_mns,stdType="std")
 
-# result15_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="log_albu")
+# result15_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="log_albu")
 result15_afttest_form3_mns$p_value
 result15_afttest_form3_mns$p_std_value
 # afttestplot(result15_afttest_form3_mns,stdType="unstd")
 # afttestplot(result15_afttest_form3_mns,stdType="std")
 
-# result15_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="log_age")
+# result15_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="log_age")
 result15_afttest_form4_mns$p_value
 result15_afttest_form4_mns$p_std_value
 # afttestplot(result15_afttest_form4_mns,stdType="unstd")
@@ -698,39 +696,39 @@ result15_afttest_form4_mns$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result16_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+log_age+edem+trt,path=path,testType="omni",eqType="mns")
+# result16_afttest_omni_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+log_age+edem+trt,path=200,testType="omni",eqType="mns")
 result16_afttest_omni_mns$p_value
 result16_afttest_omni_mns$p_std_value
 # afttestplot(result16_afttest_omni_mns,stdType="unstd")
 # afttestplot(result16_afttest_omni_mns,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result16_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+log_age+edem+trt,path=path,testType="link",eqType="mns")
+# result16_afttest_link_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+log_age+edem+trt,path=200,testType="link",eqType="mns")
 result16_afttest_link_mns$p_value
 result16_afttest_link_mns$p_std_value
 # afttestplot(result16_afttest_link_mns,stdType="unstd")
 # afttestplot(result16_afttest_link_mns,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result16_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="log_bili")
+# result16_afttest_form1_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="log_bili")
 result16_afttest_form1_mns$p_value
 result16_afttest_form1_mns$p_std_value
 # afttestplot(result16_afttest_form1_mns,stdType="unstd")
 # afttestplot(result16_afttest_form1_mns,stdType="std")
 
-# result16_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="log_prot")
+# result16_afttest_form2_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="log_prot")
 result16_afttest_form2_mns$p_value
 result16_afttest_form2_mns$p_std_value
 # afttestplot(result16_afttest_form2_mns,stdType="unstd")
 # afttestplot(result16_afttest_form2_mns,stdType="std")
 
-# result16_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="log_albu")
+# result16_afttest_form3_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="log_albu")
 result16_afttest_form3_mns$p_value
 result16_afttest_form3_mns$p_std_value
 # afttestplot(result16_afttest_form3_mns,stdType="unstd")
 # afttestplot(result16_afttest_form3_mns,stdType="std")
 
-# result16_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mns",form="log_age")
+# result16_afttest_form4_mns=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mns",form="log_age")
 result16_afttest_form4_mns$p_value
 result16_afttest_form4_mns$p_std_value
 # afttestplot(result16_afttest_form4_mns,stdType="unstd")
@@ -745,39 +743,39 @@ result16_afttest_form4_mns$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result01_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem+trt,path=path,testType="omni",eqType="mis")
+# result01_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem+trt,path=200,testType="omni",eqType="mis")
 result01_afttest_omni_mis$p_value
 result01_afttest_omni_mis$p_std_value
 # afttestplot(result01_afttest_omni_mis,stdType="unstd")
 # afttestplot(result01_afttest_omni_mis_mis,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result01_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem+trt,path=path,testType="link",eqType="mis")
+# result01_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem+trt,path=200,testType="link",eqType="mis")
 result01_afttest_link_mis$p_value
 result01_afttest_link_mis$p_std_value
 # afttestplot(result01_afttest_link_mis,stdType="unstd")
 # afttestplot(result01_afttest_link_mis,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result01_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem+trt,path=path,testType="form",eqType="mis",form="bili")
+# result01_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem+trt,path=200,testType="form",eqType="mis",form="bili")
 result01_afttest_form1_mis$p_value
 result01_afttest_form1_mis$p_std_value
 # afttestplot(result01_afttest_form1_mis,stdType="unstd")
 # afttestplot(result01_afttest_form1_mis,stdType="std")
 
-# result01_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem+trt,path=path,testType="form",eqType="mis",form="prot")
+# result01_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem+trt,path=200,testType="form",eqType="mis",form="prot")
 result01_afttest_form2_mis$p_value
 result01_afttest_form2_mis$p_std_value
 # afttestplot(result01_afttest_form2_mis,stdType="unstd")
 # afttestplot(result01_afttest_form2_mis,stdType="std")
 
-# result01_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem+trt,path=path,testType="form",eqType="mis",form="albu")
+# result01_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem+trt,path=200,testType="form",eqType="mis",form="albu")
 result01_afttest_form3_mis$p_value
 result01_afttest_form3_mis$p_std_value
 # afttestplot(result01_afttest_form3_mis,stdType="unstd")
 # afttestplot(result01_afttest_form3_mis,stdType="std")
 
-# result01_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem+trt,path=path,testType="form",eqType="mis",form="age")
+# result01_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem+trt,path=200,testType="form",eqType="mis",form="age")
 result01_afttest_form4_mis$p_value
 result01_afttest_form4_mis$p_std_value
 # afttestplot(result01_afttest_form4_mis,stdType="unstd")
@@ -788,39 +786,39 @@ result01_afttest_form4_mis$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result02_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem+trt,path=path,testType="omni",eqType="mis")
+# result02_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem+trt,path=200,testType="omni",eqType="mis")
 result02_afttest_omni_mis$p_value
 result02_afttest_omni_mis$p_std_value
 # afttestplot(result02_afttest_omni_mis,stdType="unstd")
 # afttestplot(result02_afttest_omni_mis,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result02_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem+trt,path=path,testType="link",eqType="mis")
+# result02_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem+trt,path=200,testType="link",eqType="mis")
 result02_afttest_link_mis$p_value
 result02_afttest_link_mis$p_std_value
 # afttestplot(result02_afttest_link_mis,stdType="unstd")
 # afttestplot(result02_afttest_link_mis,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result02_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem+trt,path=path,testType="form",eqType="mis",form="log_bili")
+# result02_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem+trt,path=200,testType="form",eqType="mis",form="log_bili")
 result02_afttest_form1_mis$p_value
 result02_afttest_form1_mis$p_std_value
 # afttestplot(result02_afttest_form1_mis,stdType="unstd")
 # afttestplot(result02_afttest_form1_mis,stdType="std")
 
-# result02_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem+trt,path=path,testType="form",eqType="mis",form="prot")
+# result02_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem+trt,path=200,testType="form",eqType="mis",form="prot")
 result02_afttest_form2_mis$p_value
 result02_afttest_form2_mis$p_std_value
 # afttestplot(result02_afttest_form2_mis,stdType="unstd")
 # afttestplot(result02_afttest_form2_mis,stdType="std")
 
-# result02_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem+trt,path=path,testType="form",eqType="mis",form="albu")
+# result02_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem+trt,path=200,testType="form",eqType="mis",form="albu")
 result02_afttest_form3_mis$p_value
 result02_afttest_form3_mis$p_std_value
 # afttestplot(result02_afttest_form3_mis,stdType="unstd")
 # afttestplot(result02_afttest_form3_mis,stdType="std")
 
-# result02_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem+trt,path=path,testType="form",eqType="mis",form="age")
+# result02_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem+trt,path=200,testType="form",eqType="mis",form="age")
 result02_afttest_form4_mis$p_value
 result02_afttest_form4_mis$p_std_value
 # afttestplot(result02_afttest_form4_mis,stdType="unstd")
@@ -831,39 +829,39 @@ result02_afttest_form4_mis$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result03_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+age+edem+trt,path=path,testType="omni",eqType="mis")
+# result03_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+age+edem+trt,path=200,testType="omni",eqType="mis")
 result03_afttest_omni_mis$p_value
 result03_afttest_omni_mis$p_std_value
 # afttestplot(result03_afttest_omni_mis,stdType="unstd")
 # afttestplot(result03_afttest_omni_mis,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result03_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+age+edem+trt,path=path,testType="link",eqType="mis")
+# result03_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+age+edem+trt,path=200,testType="link",eqType="mis")
 result03_afttest_link_mis$p_value
 result03_afttest_link_mis$p_std_value
 # afttestplot(result03_afttest_link_mis,stdType="unstd")
 # afttestplot(result03_afttest_link_mis,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result03_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+age+edem+trt,path=path,testType="form",eqType="mis",form="bili")
+# result03_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+age+edem+trt,path=200,testType="form",eqType="mis",form="bili")
 result03_afttest_form1_mis$p_value
 result03_afttest_form1_mis$p_std_value
 # afttestplot(result03_afttest_form1_mis,stdType="unstd")
 # afttestplot(result03_afttest_form1_mis,stdType="std")
 
-# result03_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+age+edem+trt,path=path,testType="form",eqType="mis",form="log_prot")
+# result03_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+age+edem+trt,path=200,testType="form",eqType="mis",form="log_prot")
 result03_afttest_form2_mis$p_value
 result03_afttest_form2_mis$p_std_value
 # afttestplot(result03_afttest_form2_mis,stdType="unstd")
 # afttestplot(result03_afttest_form2_mis,stdType="std")
 
-# result03_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+age+edem+trt,path=path,testType="form",eqType="mis",form="albu")
+# result03_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+age+edem+trt,path=200,testType="form",eqType="mis",form="albu")
 result03_afttest_form3_mis$p_value
 result03_afttest_form3_mis$p_std_value
 # afttestplot(result03_afttest_form3_mis,stdType="unstd")
 # afttestplot(result03_afttest_form3_mis,stdType="std")
 
-# result03_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+age+edem+trt,path=path,testType="form",eqType="mis",form="age")
+# result03_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+age+edem+trt,path=200,testType="form",eqType="mis",form="age")
 result03_afttest_form4_mis$p_value
 result03_afttest_form4_mis$p_std_value
 # afttestplot(result03_afttest_form4_mis,stdType="unstd")
@@ -874,39 +872,39 @@ result03_afttest_form4_mis$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result04_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+age+edem+trt,path=path,testType="omni",eqType="mis")
+# result04_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+age+edem+trt,path=200,testType="omni",eqType="mis")
 result04_afttest_omni_mis$p_value
 result04_afttest_omni_mis$p_std_value
 # afttestplot(result04_afttest_omni_mis,stdType="unstd")
 # afttestplot(result04_afttest_omni_mis,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result04_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+age+edem+trt,path=path,testType="link",eqType="mis")
+# result04_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+age+edem+trt,path=200,testType="link",eqType="mis")
 result04_afttest_link_mis$p_value
 result04_afttest_link_mis$p_std_value
 # afttestplot(result04_afttest_link_mis,stdType="unstd")
 # afttestplot(result04_afttest_link_mis,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result04_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mis",form="bili")
+# result04_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mis",form="bili")
 result04_afttest_form1_mis$p_value
 result04_afttest_form1_mis$p_std_value
 # afttestplot(result04_afttest_form1_mis,stdType="unstd")
 # afttestplot(result04_afttest_form1_mis,stdType="std")
 
-# result04_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mis",form="prot")
+# result04_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mis",form="prot")
 result04_afttest_form2_mis$p_value
 result04_afttest_form2_mis$p_std_value
 # afttestplot(result04_afttest_form2_mis,stdType="unstd")
 # afttestplot(result04_afttest_form2_mis,stdType="std")
 
-# result04_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mis",form="log_albu")
+# result04_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mis",form="log_albu")
 result04_afttest_form3_mis$p_value
 result04_afttest_form3_mis$p_std_value
 # afttestplot(result04_afttest_form3_mis,stdType="unstd")
 # afttestplot(result04_afttest_form3_mis,stdType="std")
 
-# result04_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mis",form="age")
+# result04_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mis",form="age")
 result04_afttest_form4_mis$p_value
 result04_afttest_form4_mis$p_std_value
 # afttestplot(result04_afttest_form4_mis,stdType="unstd")
@@ -917,39 +915,39 @@ result04_afttest_form4_mis$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result05_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+log_age+edem+trt,path=path,testType="omni",eqType="mis")
+# result05_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+log_age+edem+trt,path=200,testType="omni",eqType="mis")
 result05_afttest_omni_mis$p_value
 result05_afttest_omni_mis$p_std_value
 # afttestplot(result05_afttest_omni_mis,stdType="unstd")
 # afttestplot(result05_afttest_omni_mis,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result05_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+log_age+edem+trt,path=path,testType="link",eqType="mis")
+# result05_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+log_age+edem+trt,path=200,testType="link",eqType="mis")
 result05_afttest_link_mis$p_value
 result05_afttest_link_mis$p_std_value
 # afttestplot(result05_afttest_link_mis,stdType="unstd")
 # afttestplot(result05_afttest_link_mis,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result05_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="bili")
+# result05_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="bili")
 result05_afttest_form1_mis$p_value
 result05_afttest_form1_mis$p_std_value
 # afttestplot(result05_afttest_form1_mis,stdType="unstd")
 # afttestplot(result05_afttest_form1_mis,stdType="std")
 
-# result05_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="prot")
+# result05_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="prot")
 result05_afttest_form2_mis$p_value
 result05_afttest_form2_mis$p_std_value
 # afttestplot(result05_afttest_form2_mis,stdType="unstd")
 # afttestplot(result05_afttest_form2_mis,stdType="std")
 
-# result05_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="albu")
+# result05_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="albu")
 result05_afttest_form3_mis$p_value
 result05_afttest_form3_mis$p_std_value
 # afttestplot(result05_afttest_form3_mis,stdType="unstd")
 # afttestplot(result05_afttest_form3_mis,stdType="std")
 
-# result05_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="log_age")
+# result05_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="log_age")
 result05_afttest_form4_mis$p_value
 result05_afttest_form4_mis$p_std_value
 # afttestplot(result05_afttest_form4_mis,stdType="unstd")
@@ -960,39 +958,39 @@ result05_afttest_form4_mis$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result06_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+age+edem+trt,path=path,testType="omni",eqType="mis")
+# result06_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+age+edem+trt,path=200,testType="omni",eqType="mis")
 result06_afttest_omni_mis$p_value
 result06_afttest_omni_mis$p_std_value
 # afttestplot(result06_afttest_omni_mis,stdType="unstd")
 # afttestplot(result06_afttest_omni_mis,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result06_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+age+edem+trt,path=path,testType="link",eqType="mis")
+# result06_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+age+edem+trt,path=200,testType="link",eqType="mis")
 result06_afttest_link_mis$p_value
 result06_afttest_link_mis$p_std_value
 # afttestplot(result06_afttest_link_mis,stdType="unstd")
 # afttestplot(result06_afttest_link_mis,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result06_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+age+edem+trt,path=path,testType="form",eqType="mis",form="log_bili")
+# result06_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+age+edem+trt,path=200,testType="form",eqType="mis",form="log_bili")
 result06_afttest_form1_mis$p_value
 result06_afttest_form1_mis$p_std_value
 # afttestplot(result06_afttest_form1_mis,stdType="unstd")
 # afttestplot(result06_afttest_form1_mis,stdType="std")
 
-# result06_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+age+edem+trt,path=path,testType="form",eqType="mis",form="log_prot")
+# result06_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+age+edem+trt,path=200,testType="form",eqType="mis",form="log_prot")
 result06_afttest_form2_mis$p_value
 result06_afttest_form2_mis$p_std_value
 # afttestplot(result06_afttest_form2_mis,stdType="unstd")
 # afttestplot(result06_afttest_form2_mis,stdType="std")
 
-# result06_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+age+edem+trt,path=path,testType="form",eqType="mis",form="albu")
+# result06_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+age+edem+trt,path=200,testType="form",eqType="mis",form="albu")
 result06_afttest_form3_mis$p_value
 result06_afttest_form3_mis$p_std_value
 # afttestplot(result06_afttest_form3_mis,stdType="unstd")
 # afttestplot(result06_afttest_form3_mis,stdType="std")
 
-# result06_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+age+edem+trt,path=path,testType="form",eqType="mis",form="age")
+# result06_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+age+edem+trt,path=200,testType="form",eqType="mis",form="age")
 result06_afttest_form4_mis$p_value
 result06_afttest_form4_mis$p_std_value
 # afttestplot(result06_afttest_form4_mis,stdType="unstd")
@@ -1003,39 +1001,39 @@ result06_afttest_form4_mis$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result07_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+age+edem+trt,path=path,testType="omni",eqType="mis")
+# result07_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+age+edem+trt,path=200,testType="omni",eqType="mis")
 result07_afttest_omni_mis$p_value
 result07_afttest_omni_mis$p_std_value
 # afttestplot(result07_afttest_omni_mis,stdType="unstd")
 # afttestplot(result07_afttest_omni_mis,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result07_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+age+edem+trt,path=path,testType="link",eqType="mis")
+# result07_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+age+edem+trt,path=200,testType="link",eqType="mis")
 result07_afttest_link_mis$p_value
 result07_afttest_link_mis$p_std_value
 # afttestplot(result07_afttest_link_mis,stdType="unstd")
 # afttestplot(result07_afttest_link_mis,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result07_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mis",form="log_bili")
+# result07_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mis",form="log_bili")
 result07_afttest_form1_mis$p_value
 result07_afttest_form1_mis$p_std_value
 # afttestplot(result07_afttest_form1_mis,stdType="unstd")
 # afttestplot(result07_afttest_form1_mis,stdType="std")
 
-# result07_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mis",form="prot")
+# result07_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mis",form="prot")
 result07_afttest_form2_mis$p_value
 result07_afttest_form2_mis$p_std_value
 # afttestplot(result07_afttest_form2_mis,stdType="unstd")
 # afttestplot(result07_afttest_form2_mis,stdType="std")
 
-# result07_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mis",form="log_albu")
+# result07_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mis",form="log_albu")
 result07_afttest_form3_mis$p_value
 result07_afttest_form3_mis$p_std_value
 # afttestplot(result07_afttest_form3_mis,stdType="unstd")
 # afttestplot(result07_afttest_form3_mis,stdType="std")
 
-# result07_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mis",form="age")
+# result07_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mis",form="age")
 result07_afttest_form4_mis$p_value
 result07_afttest_form4_mis$p_std_value
 # afttestplot(result07_afttest_form4_mis,stdType="unstd")
@@ -1046,39 +1044,39 @@ result07_afttest_form4_mis$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result08_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+log_age+edem+trt,path=path,testType="omni",eqType="mis")
+# result08_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+log_age+edem+trt,path=200,testType="omni",eqType="mis")
 result08_afttest_omni_mis$p_value
 result08_afttest_omni_mis$p_std_value
 # afttestplot(result08_afttest_omni_mis,stdType="unstd")
 # afttestplot(result08_afttest_omni_mis,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result08_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+log_age+edem+trt,path=path,testType="link",eqType="mis")
+# result08_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+log_age+edem+trt,path=200,testType="link",eqType="mis")
 result08_afttest_link_mis$p_value
 result08_afttest_link_mis$p_std_value
 # afttestplot(result08_afttest_link_mis,stdType="unstd")
 # afttestplot(result08_afttest_link_mis,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result08_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="log_bili")
+# result08_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="log_bili")
 result08_afttest_form1_mis$p_value
 result08_afttest_form1_mis$p_std_value
 # afttestplot(result08_afttest_form1_mis,stdType="unstd")
 # afttestplot(result08_afttest_form1_mis,stdType="std")
 
-# result08_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="prot")
+# result08_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="prot")
 result08_afttest_form2_mis$p_value
 result08_afttest_form2_mis$p_std_value
 # afttestplot(result08_afttest_form2_mis,stdType="unstd")
 # afttestplot(result08_afttest_form2_mis,stdType="std")
 
-# result08_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="albu")
+# result08_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="albu")
 result08_afttest_form3_mis$p_value
 result08_afttest_form3_mis$p_std_value
 # afttestplot(result08_afttest_form3_mis,stdType="unstd")
 # afttestplot(result08_afttest_form3_mis,stdType="std")
 
-# result08_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="log_age")
+# result08_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="log_age")
 result08_afttest_form4_mis$p_value
 result08_afttest_form4_mis$p_std_value
 # afttestplot(result08_afttest_form4_mis,stdType="unstd")
@@ -1089,39 +1087,39 @@ result08_afttest_form4_mis$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result09_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+age+edem+trt,path=path,testType="omni",eqType="mis")
+# result09_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+age+edem+trt,path=200,testType="omni",eqType="mis")
 result09_afttest_omni_mis$p_value
 result09_afttest_omni_mis$p_std_value
 # afttestplot(result09_afttest_omni_mis,stdType="unstd")
 # afttestplot(result09_afttest_omni_mis,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result09_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+age+edem+trt,path=path,testType="link",eqType="mis")
+# result09_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+age+edem+trt,path=200,testType="link",eqType="mis")
 result09_afttest_link_mis$p_value
 result09_afttest_link_mis$p_std_value
 # afttestplot(result09_afttest_link_mis,stdType="unstd")
 # afttestplot(result09_afttest_link_mis,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result09_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mis",form="bili")
+# result09_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mis",form="bili")
 result09_afttest_form1_mis$p_value
 result09_afttest_form1_mis$p_std_value
 # afttestplot(result09_afttest_form1_mis,stdType="unstd")
 # afttestplot(result09_afttest_form1_mis,stdType="std")
 
-# result09_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mis",form="log_prot")
+# result09_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mis",form="log_prot")
 result09_afttest_form2_mis$p_value
 result09_afttest_form2_mis$p_std_value
 # afttestplot(result09_afttest_form2_mis,stdType="unstd")
 # afttestplot(result09_afttest_form2_mis,stdType="std")
 
-# result09_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mis",form="log_albu")
+# result09_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mis",form="log_albu")
 result09_afttest_form3_mis$p_value
 result09_afttest_form3_mis$p_std_value
 # afttestplot(result09_afttest_form3_mis,stdType="unstd")
 # afttestplot(result09_afttest_form3_mis,stdType="std")
 
-# result09_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mis",form="age")
+# result09_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mis",form="age")
 result09_afttest_form4_mis$p_value
 result09_afttest_form4_mis$p_std_value
 # afttestplot(result09_afttest_form4_mis,stdType="unstd")
@@ -1132,39 +1130,39 @@ result09_afttest_form4_mis$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result10_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+log_age+edem+trt,path=path,testType="omni",eqType="mis")
+# result10_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+log_age+edem+trt,path=200,testType="omni",eqType="mis")
 result10_afttest_omni_mis$p_value
 result10_afttest_omni_mis$p_std_value
 # afttestplot(result10_afttest_omni_mis,stdType="unstd")
 # afttestplot(result10_afttest_omni_mis,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result10_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+log_age+edem+trt,path=path,testType="link",eqType="mis")
+# result10_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+log_age+edem+trt,path=200,testType="link",eqType="mis")
 result10_afttest_link_mis$p_value
 result10_afttest_link_mis$p_std_value
 # afttestplot(result10_afttest_link_mis,stdType="unstd")
 # afttestplot(result10_afttest_link_mis,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result10_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="bili")
+# result10_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="bili")
 result10_afttest_form1_mis$p_value
 result10_afttest_form1_mis$p_std_value
 # afttestplot(result10_afttest_form1_mis,stdType="unstd")
 # afttestplot(result10_afttest_form1_mis,stdType="std")
 
-# result10_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="log_prot")
+# result10_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="log_prot")
 result10_afttest_form2_mis$p_value
 result10_afttest_form2_mis$p_std_value
 # afttestplot(result10_afttest_form2_mis,stdType="unstd")
 # afttestplot(result10_afttest_form2_mis,stdType="std")
 
-# result10_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="albu")
+# result10_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="albu")
 result10_afttest_form3_mis$p_value
 result10_afttest_form3_mis$p_std_value
 # afttestplot(result10_afttest_form3_mis,stdType="unstd")
 # afttestplot(result10_afttest_form3_mis,stdType="std")
 
-# result10_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="log_age")
+# result10_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="log_age")
 result10_afttest_form4_mis$p_value
 result10_afttest_form4_mis$p_std_value
 # afttestplot(result10_afttest_form4_mis,stdType="unstd")
@@ -1175,39 +1173,39 @@ result10_afttest_form4_mis$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result11_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+log_age+edem+trt,path=path,testType="omni",eqType="mis")
+# result11_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+log_age+edem+trt,path=200,testType="omni",eqType="mis")
 result11_afttest_omni_mis$p_value
 result11_afttest_omni_mis$p_std_value
 # afttestplot(result11_afttest_omni_mis,stdType="unstd")
 # afttestplot(result11_afttest_omni_mis,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result11_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+log_age+edem+trt,path=path,testType="link",eqType="mis")
+# result11_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+log_age+edem+trt,path=200,testType="link",eqType="mis")
 result11_afttest_link_mis$p_value
 result11_afttest_link_mis$p_std_value
 # afttestplot(result11_afttest_link_mis,stdType="unstd")
 # afttestplot(result11_afttest_link_mis,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result11_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="bili")
+# result11_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="bili")
 result11_afttest_form1_mis$p_value
 result11_afttest_form1_mis$p_std_value
 # afttestplot(result11_afttest_form1_mis,stdType="unstd")
 # afttestplot(result11_afttest_form1_mis,stdType="std")
 
-# result11_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="prot")
+# result11_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="prot")
 result11_afttest_form2_mis$p_value
 result11_afttest_form2_mis$p_std_value
 # afttestplot(result11_afttest_form2_mis,stdType="unstd")
 # afttestplot(result11_afttest_form2_mis,stdType="std")
 
-# result11_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="log_albu")
+# result11_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="log_albu")
 result11_afttest_form3_mis$p_value
 result11_afttest_form3_mis$p_std_value
 # afttestplot(result11_afttest_form3_mis,stdType="unstd")
 # afttestplot(result11_afttest_form3_mis,stdType="std")
 
-# result11_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="log_age")
+# result11_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="log_age")
 result11_afttest_form4_mis$p_value
 result11_afttest_form4_mis$p_std_value
 # afttestplot(result11_afttest_form4_mis,stdType="unstd")
@@ -1218,39 +1216,39 @@ result11_afttest_form4_mis$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result12_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+age+edem+trt,path=path,testType="omni",eqType="mis")
+# result12_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+age+edem+trt,path=200,testType="omni",eqType="mis")
 result12_afttest_omni_mis$p_value
 result12_afttest_omni_mis$p_std_value
 # afttestplot(result12_afttest_omni_mis,stdType="unstd")
 # afttestplot(result12_afttest_omni_mis,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result12_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+age+edem+trt,path=path,testType="link",eqType="mis")
+# result12_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+age+edem+trt,path=200,testType="link",eqType="mis")
 result12_afttest_link_mis$p_value
 result12_afttest_link_mis$p_std_value
 # afttestplot(result12_afttest_link_mis,stdType="unstd")
 # afttestplot(result12_afttest_link_mis,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result12_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mis",form="log_bili")
+# result12_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mis",form="log_bili")
 result12_afttest_form1_mis$p_value
 result12_afttest_form1_mis$p_std_value
 # afttestplot(result12_afttest_form1_mis,stdType="unstd")
 # afttestplot(result12_afttest_form1_mis,stdType="std")
 
-# result12_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mis",form="log_prot")
+# result12_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mis",form="log_prot")
 result12_afttest_form2_mis$p_value
 result12_afttest_form2_mis$p_std_value
 # afttestplot(result12_afttest_form2_mis,stdType="unstd")
 # afttestplot(result12_afttest_form2_mis,stdType="std")
 
-# result12_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mis",form="log_albu")
+# result12_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mis",form="log_albu")
 result12_afttest_form3_mis$p_value
 result12_afttest_form3_mis$p_std_value
 # afttestplot(result12_afttest_form3_mis,stdType="unstd")
 # afttestplot(result12_afttest_form3_mis,stdType="std")
 
-# result12_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+age+edem+trt,path=path,testType="form",eqType="mis",form="age")
+# result12_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+age+edem+trt,path=200,testType="form",eqType="mis",form="age")
 result12_afttest_form4_mis$p_value
 result12_afttest_form4_mis$p_std_value
 # afttestplot(result12_afttest_form4_mis,stdType="unstd")
@@ -1261,39 +1259,39 @@ result12_afttest_form4_mis$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result13_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+log_age+edem+trt,path=path,testType="omni",eqType="mis")
+# result13_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+log_age+edem+trt,path=200,testType="omni",eqType="mis")
 result13_afttest_omni_mis$p_value
 result13_afttest_omni_mis$p_std_value
 # afttestplot(result13_afttest_omni_mis,stdType="unstd")
 # afttestplot(result13_afttest_omni_mis,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result13_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+log_age+edem+trt,path=path,testType="link",eqType="mis")
+# result13_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+log_age+edem+trt,path=200,testType="link",eqType="mis")
 result13_afttest_link_mis$p_value
 result13_afttest_link_mis$p_std_value
 # afttestplot(result13_afttest_link_mis,stdType="unstd")
 # afttestplot(result13_afttest_link_mis,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result13_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="log_bili")
+# result13_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="log_bili")
 result13_afttest_form1_mis$p_value
 result13_afttest_form1_mis$p_std_value
 # afttestplot(result13_afttest_form1_mis,stdType="unstd")
 # afttestplot(result13_afttest_form1_mis,stdType="std")
 
-# result13_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="log_prot")
+# result13_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="log_prot")
 result13_afttest_form2_mis$p_value
 result13_afttest_form2_mis$p_std_value
 # afttestplot(result13_afttest_form2_mis,stdType="unstd")
 # afttestplot(result13_afttest_form2_mis,stdType="std")
 
-# result13_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="albu")
+# result13_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="albu")
 result13_afttest_form3_mis$p_value
 result13_afttest_form3_mis$p_std_value
 # afttestplot(result13_afttest_form3_mis,stdType="unstd")
 # afttestplot(result13_afttest_form3_mis,stdType="std")
 
-# result13_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="log_age")
+# result13_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="log_age")
 result13_afttest_form4_mis$p_value
 result13_afttest_form4_mis$p_std_value
 # afttestplot(result13_afttest_form4_mis,stdType="unstd")
@@ -1304,39 +1302,39 @@ result13_afttest_form4_mis$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result14_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+log_age+edem+trt,path=path,testType="omni",eqType="mis")
+# result14_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+log_age+edem+trt,path=200,testType="omni",eqType="mis")
 result14_afttest_omni_mis$p_value
 result14_afttest_omni_mis$p_std_value
 # afttestplot(result14_afttest_omni_mis,stdType="unstd")
 # afttestplot(result14_afttest_omni_mis,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result14_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+log_age+edem+trt,path=path,testType="link",eqType="mis")
+# result14_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+log_age+edem+trt,path=200,testType="link",eqType="mis")
 result14_afttest_link_mis$p_value
 result14_afttest_link_mis$p_std_value
 # afttestplot(result14_afttest_link_mis,stdType="unstd")
 # afttestplot(result14_afttest_link_mis,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result14_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="log_bili")
+# result14_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="log_bili")
 result14_afttest_form1_mis$p_value
 result14_afttest_form1_mis$p_std_value
 # afttestplot(result14_afttest_form1_mis,stdType="unstd")
 # afttestplot(result14_afttest_form1_mis,stdType="std")
 
-# result14_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="prot")
+# result14_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="prot")
 result14_afttest_form2_mis$p_value
 result14_afttest_form2_mis$p_std_value
 # afttestplot(result14_afttest_form2_mis,stdType="unstd")
 # afttestplot(result14_afttest_form2_mis,stdType="std")
 
-# result14_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="log_albu")
+# result14_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="log_albu")
 result14_afttest_form3_mis$p_value
 result14_afttest_form3_mis$p_std_value
 # afttestplot(result14_afttest_form3_mis,stdType="unstd")
 # afttestplot(result14_afttest_form3_mis,stdType="std")
 
-# result14_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="log_age")
+# result14_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="log_age")
 result14_afttest_form4_mis$p_value
 result14_afttest_form4_mis$p_std_value
 # afttestplot(result14_afttest_form4_mis,stdType="unstd")
@@ -1347,39 +1345,39 @@ result14_afttest_form4_mis$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result15_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+log_age+edem+trt,path=path,testType="omni",eqType="mis")
+# result15_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+log_age+edem+trt,path=200,testType="omni",eqType="mis")
 result15_afttest_omni_mis$p_value
 result15_afttest_omni_mis$p_std_value
 # afttestplot(result15_afttest_omni_mis,stdType="unstd")
 # afttestplot(result15_afttest_omni_mis,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result15_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+log_age+edem+trt,path=path,testType="link",eqType="mis")
+# result15_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+log_age+edem+trt,path=200,testType="link",eqType="mis")
 result15_afttest_link_mis$p_value
 result15_afttest_link_mis$p_std_value
 # afttestplot(result15_afttest_link_mis,stdType="unstd")
 # afttestplot(result15_afttest_link_mis,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result15_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="bili")
+# result15_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="bili")
 result15_afttest_form1_mis$p_value
 result15_afttest_form1_mis$p_std_value
 # afttestplot(result15_afttest_form1_mis,stdType="unstd")
 # afttestplot(result15_afttest_form1_mis,stdType="std")
 
-# result15_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="log_prot")
+# result15_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="log_prot")
 result15_afttest_form2_mis$p_value
 result15_afttest_form2_mis$p_std_value
 # afttestplot(result15_afttest_form2_mis,stdType="unstd")
 # afttestplot(result15_afttest_form2_mis,stdType="std")
 
-# result15_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="log_albu")
+# result15_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="log_albu")
 result15_afttest_form3_mis$p_value
 result15_afttest_form3_mis$p_std_value
 # afttestplot(result15_afttest_form3_mis,stdType="unstd")
 # afttestplot(result15_afttest_form3_mis,stdType="std")
 
-# result15_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="log_age")
+# result15_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~bili+log_prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="log_age")
 result15_afttest_form4_mis$p_value
 result15_afttest_form4_mis$p_std_value
 # afttestplot(result15_afttest_form4_mis,stdType="unstd")
@@ -1390,39 +1388,39 @@ result15_afttest_form4_mis$p_std_value
 # ------------------------------------------------------------------------------
 
 # ------------------------------------ omni ------------------------------------
-# result16_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+log_age+edem+trt,path=path,testType="omni",eqType="mis")
+# result16_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+log_age+edem+trt,path=200,testType="omni",eqType="mis")
 result16_afttest_omni_mis$p_value
 result16_afttest_omni_mis$p_std_value
 # afttestplot(result16_afttest_omni_mis,stdType="unstd")
 # afttestplot(result16_afttest_omni_mis,stdType="std")
 
 # ------------------------------------ link ------------------------------------
-# result16_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+log_age+edem+trt,path=path,testType="link",eqType="mis")
+# result16_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+log_age+edem+trt,path=200,testType="link",eqType="mis")
 result16_afttest_link_mis$p_value
 result16_afttest_link_mis$p_std_value
 # afttestplot(result16_afttest_link_mis,stdType="unstd")
 # afttestplot(result16_afttest_link_mis,stdType="std")
 
 # ------------------------------------ form ------------------------------------
-# result16_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="log_bili")
+# result16_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="log_bili")
 result16_afttest_form1_mis$p_value
 result16_afttest_form1_mis$p_std_value
 # afttestplot(result16_afttest_form1_mis,stdType="unstd")
 # afttestplot(result16_afttest_form1_mis,stdType="std")
 
-# result16_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="log_prot")
+# result16_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="log_prot")
 result16_afttest_form2_mis$p_value
 result16_afttest_form2_mis$p_std_value
 # afttestplot(result16_afttest_form2_mis,stdType="unstd")
 # afttestplot(result16_afttest_form2_mis,stdType="std")
 
-# result16_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="log_albu")
+# result16_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="log_albu")
 result16_afttest_form3_mis$p_value
 result16_afttest_form3_mis$p_std_value
 # afttestplot(result16_afttest_form3_mis,stdType="unstd")
 # afttestplot(result16_afttest_form3_mis,stdType="std")
 
-# result16_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+log_age+edem+trt,path=path,testType="form",eqType="mis",form="log_age")
+# result16_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+log_prot+log_albu+log_age+edem+trt,path=200,testType="form",eqType="mis",form="log_age")
 result16_afttest_form4_mis$p_value
 result16_afttest_form4_mis$p_std_value
 # afttestplot(result16_afttest_form4_mis,stdType="unstd")
