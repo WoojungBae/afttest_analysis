@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=Sim5                          # Job name
-#SBATCH --array=1-500                                # At most 50 jobs at a time YMMV, make sure $
+#SBATCH --array=1-500                                # At most 50 jobs at a time YMMV, make sure 
 #SBATCH --cpus-per-task=1
 #SBATCH --account=daniels
 #SBATCH --qos=daniels-b
