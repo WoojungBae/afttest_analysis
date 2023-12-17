@@ -1,6 +1,6 @@
 # setwd("/Users/WooJung/Desktop")
 # setwd("/Users/WooJung/Documents/Rproject/afttest_analysis")
-setwd("/Users/WooJung/Documents/Rproject/afttest_analysis/SimulationStudy")
+setwd("/Users/WooJung/Documents/Rproject/afttest_analysis/SimulationStudy/NewSim")
 
 # Type 1 error control
 alpha = 0.05

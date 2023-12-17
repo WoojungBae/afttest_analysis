@@ -108,96 +108,96 @@ result02_afttest_form4_mns$p_value
 result02_afttest_form4_mns$p_std_value
 # afttestplot(result02_afttest_form4_mns,stdType="unstd")
 # afttestplot(result02_afttest_form4_mns,stdType="std")
-# 
-# # ------------------------------------------------------------------------------
-# # ------------------------------------ "mis" -----------------------------------
-# # ------------------------------------------------------------------------------
-# 
-# # ------------------------------------------------------------------------------
-# # -------------------- Covariates: bili+prot+albu+age+edem --------------------
-# # ------------------------------------------------------------------------------
-# 
-# # ------------------------------------ omni ------------------------------------
-# result01_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem,path=200,testType="omni",eqType="mis")
-# result01_afttest_omni_mis$p_value
-# result01_afttest_omni_mis$p_std_value
-# # afttestplot(result01_afttest_omni_mis,stdType="unstd")
-# # afttestplot(result01_afttest_omni_mis_mis,stdType="std")
-# 
-# # ------------------------------------ link ------------------------------------
-# result01_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem,path=200,testType="link",eqType="mis")
-# result01_afttest_link_mis$p_value
-# result01_afttest_link_mis$p_std_value
-# # afttestplot(result01_afttest_link_mis,stdType="unstd")
-# # afttestplot(result01_afttest_link_mis,stdType="std")
-# 
-# # ------------------------------------ form ------------------------------------
-# result01_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem,path=200,testType="form",eqType="mis",form="bili")
-# result01_afttest_form1_mis$p_value
-# result01_afttest_form1_mis$p_std_value
-# # afttestplot(result01_afttest_form1_mis,stdType="unstd")
-# # afttestplot(result01_afttest_form1_mis,stdType="std")
-# 
-# result01_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem,path=200,testType="form",eqType="mis",form="prot")
-# result01_afttest_form2_mis$p_value
-# result01_afttest_form2_mis$p_std_value
-# # afttestplot(result01_afttest_form2_mis,stdType="unstd")
-# # afttestplot(result01_afttest_form2_mis,stdType="std")
-# 
-# result01_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem,path=200,testType="form",eqType="mis",form="albu")
-# result01_afttest_form3_mis$p_value
-# result01_afttest_form3_mis$p_std_value
-# # afttestplot(result01_afttest_form3_mis,stdType="unstd")
-# # afttestplot(result01_afttest_form3_mis,stdType="std")
-# 
-# result01_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem,path=200,testType="form",eqType="mis",form="age")
-# result01_afttest_form4_mis$p_value
-# result01_afttest_form4_mis$p_std_value
-# # afttestplot(result01_afttest_form4_mis,stdType="unstd")
-# # afttestplot(result01_afttest_form4_mis,stdType="std")
-# 
-# # ------------------------------------------------------------------------------
-# # ------------------ Covariates: log_bili+prot+albu+age+edem ------------------
-# # ------------------------------------------------------------------------------
-# 
-# # ------------------------------------ omni ------------------------------------
-# result02_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem,path=200,testType="omni",eqType="mis")
-# result02_afttest_omni_mis$p_value
-# result02_afttest_omni_mis$p_std_value
-# # afttestplot(result02_afttest_omni_mis,stdType="unstd")
-# # afttestplot(result02_afttest_omni_mis,stdType="std")
-# 
-# # ------------------------------------ link ------------------------------------
-# result02_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem,path=200,testType="link",eqType="mis")
-# result02_afttest_link_mis$p_value
-# result02_afttest_link_mis$p_std_value
-# # afttestplot(result02_afttest_link_mis,stdType="unstd")
-# # afttestplot(result02_afttest_link_mis,stdType="std")
-# 
-# # ------------------------------------ form ------------------------------------
-# result02_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem,path=200,testType="form",eqType="mis",form="log_bili")
-# result02_afttest_form1_mis$p_value
-# result02_afttest_form1_mis$p_std_value
-# # afttestplot(result02_afttest_form1_mis,stdType="unstd")
-# # afttestplot(result02_afttest_form1_mis,stdType="std")
-# 
-# result02_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem,path=200,testType="form",eqType="mis",form="prot")
-# result02_afttest_form2_mis$p_value
-# result02_afttest_form2_mis$p_std_value
-# # afttestplot(result02_afttest_form2_mis,stdType="unstd")
-# # afttestplot(result02_afttest_form2_mis,stdType="std")
-# 
-# result02_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem,path=200,testType="form",eqType="mis",form="albu")
-# result02_afttest_form3_mis$p_value
-# result02_afttest_form3_mis$p_std_value
-# # afttestplot(result02_afttest_form3_mis,stdType="unstd")
-# # afttestplot(result02_afttest_form3_mis,stdType="std")
-# 
-# result02_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem,path=200,testType="form",eqType="mis",form="age")
-# result02_afttest_form4_mis$p_value
-# result02_afttest_form4_mis$p_std_value
-# # afttestplot(result02_afttest_form4_mis,stdType="unstd")
-# # afttestplot(result02_afttest_form4_mis,stdType="std")
+
+# ------------------------------------------------------------------------------
+# ------------------------------------ "mis" -----------------------------------
+# ------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------
+# -------------------- Covariates: bili+prot+albu+age+edem --------------------
+# ------------------------------------------------------------------------------
+
+# ------------------------------------ omni ------------------------------------
+result01_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem,path=200,testType="omni",eqType="mis")
+result01_afttest_omni_mis$p_value
+result01_afttest_omni_mis$p_std_value
+# afttestplot(result01_afttest_omni_mis,stdType="unstd")
+# afttestplot(result01_afttest_omni_mis_mis,stdType="std")
+
+# ------------------------------------ link ------------------------------------
+result01_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem,path=200,testType="link",eqType="mis")
+result01_afttest_link_mis$p_value
+result01_afttest_link_mis$p_std_value
+# afttestplot(result01_afttest_link_mis,stdType="unstd")
+# afttestplot(result01_afttest_link_mis,stdType="std")
+
+# ------------------------------------ form ------------------------------------
+result01_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem,path=200,testType="form",eqType="mis",form="bili")
+result01_afttest_form1_mis$p_value
+result01_afttest_form1_mis$p_std_value
+# afttestplot(result01_afttest_form1_mis,stdType="unstd")
+# afttestplot(result01_afttest_form1_mis,stdType="std")
+
+result01_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem,path=200,testType="form",eqType="mis",form="prot")
+result01_afttest_form2_mis$p_value
+result01_afttest_form2_mis$p_std_value
+# afttestplot(result01_afttest_form2_mis,stdType="unstd")
+# afttestplot(result01_afttest_form2_mis,stdType="std")
+
+result01_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem,path=200,testType="form",eqType="mis",form="albu")
+result01_afttest_form3_mis$p_value
+result01_afttest_form3_mis$p_std_value
+# afttestplot(result01_afttest_form3_mis,stdType="unstd")
+# afttestplot(result01_afttest_form3_mis,stdType="std")
+
+result01_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~bili+prot+albu+age+edem,path=200,testType="form",eqType="mis",form="age")
+result01_afttest_form4_mis$p_value
+result01_afttest_form4_mis$p_std_value
+# afttestplot(result01_afttest_form4_mis,stdType="unstd")
+# afttestplot(result01_afttest_form4_mis,stdType="std")
+
+# ------------------------------------------------------------------------------
+# ------------------ Covariates: log_bili+prot+albu+age+edem ------------------
+# ------------------------------------------------------------------------------
+
+# ------------------------------------ omni ------------------------------------
+result02_afttest_omni_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem,path=200,testType="omni",eqType="mis")
+result02_afttest_omni_mis$p_value
+result02_afttest_omni_mis$p_std_value
+# afttestplot(result02_afttest_omni_mis,stdType="unstd")
+# afttestplot(result02_afttest_omni_mis,stdType="std")
+
+# ------------------------------------ link ------------------------------------
+result02_afttest_link_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem,path=200,testType="link",eqType="mis")
+result02_afttest_link_mis$p_value
+result02_afttest_link_mis$p_std_value
+# afttestplot(result02_afttest_link_mis,stdType="unstd")
+# afttestplot(result02_afttest_link_mis,stdType="std")
+
+# ------------------------------------ form ------------------------------------
+result02_afttest_form1_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem,path=200,testType="form",eqType="mis",form="log_bili")
+result02_afttest_form1_mis$p_value
+result02_afttest_form1_mis$p_std_value
+# afttestplot(result02_afttest_form1_mis,stdType="unstd")
+# afttestplot(result02_afttest_form1_mis,stdType="std")
+
+result02_afttest_form2_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem,path=200,testType="form",eqType="mis",form="prot")
+result02_afttest_form2_mis$p_value
+result02_afttest_form2_mis$p_std_value
+# afttestplot(result02_afttest_form2_mis,stdType="unstd")
+# afttestplot(result02_afttest_form2_mis,stdType="std")
+
+result02_afttest_form3_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem,path=200,testType="form",eqType="mis",form="albu")
+result02_afttest_form3_mis$p_value
+result02_afttest_form3_mis$p_std_value
+# afttestplot(result02_afttest_form3_mis,stdType="unstd")
+# afttestplot(result02_afttest_form3_mis,stdType="std")
+
+result02_afttest_form4_mis=afttest(Surv(X_pbc,D_pbc)~log_bili+prot+albu+age+edem,path=200,testType="form",eqType="mis",form="age")
+result02_afttest_form4_mis$p_value
+result02_afttest_form4_mis$p_std_value
+# afttestplot(result02_afttest_form4_mis,stdType="unstd")
+# afttestplot(result02_afttest_form4_mis,stdType="std")
 
 # ------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------
@@ -227,8 +227,10 @@ cbind(coef(beta02mis) - 1.96 * sqrt(diag(vcov(beta02mis)$ISMB)),
 # ------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------
-setwd("C:/Users/WooJung/Documents/Rproject/afttest_analysis/RealDataAnalysis/PBCpaper")
-save.image("C:/Users/WooJung/Documents/Rproject/afttest_analysis/RealDataAnalysis/PBCpaper/paper_pbc0102.RData")
+filename = paste0("Results/PBCpaper.RData")
+save.image(file = filename)
+# setwd("C:/Users/WooJung/Documents/Rproject/afttest_analysis/RealDataAnalysis/PBCpaper")
+# save.image("C:/Users/WooJung/Documents/Rproject/afttest_analysis/RealDataAnalysis/PBCpaper/paper_pbc0102.RData")
 
 # ------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------
@@ -236,155 +238,155 @@ save.image("C:/Users/WooJung/Documents/Rproject/afttest_analysis/RealDataAnalysi
 {
   # ------------------------------------------------------------------------------
   # ------------------------------------------------------------------------------
-  cairo_ps("pbc01_omni_mis_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc01_omni_mis_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result01_afttest_omni_mis,stdType="unstd")
   dev.off()
-  cairo_ps("pbc01_omni_mis_std.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc01_omni_mis_std.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result01_afttest_omni_mis,stdType="std")
   dev.off()
-  cairo_ps("pbc01_link_mis_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc01_link_mis_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result01_afttest_link_mis,stdType="unstd")
   dev.off()
-  cairo_ps("pbc01_link_mis_std.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc01_link_mis_std.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result01_afttest_link_mis,stdType="std")
   dev.off()
-  cairo_ps("pbc01_form1_mis_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc01_form1_mis_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result01_afttest_form1_mis,stdType="unstd")
   dev.off()
-  cairo_ps("pbc01_form1_mis_std.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc01_form1_mis_std.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result01_afttest_form1_mis,stdType="std")
   dev.off()
-  cairo_ps("pbc01_form2_mis_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc01_form2_mis_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result01_afttest_form2_mis,stdType="unstd")
   dev.off()
-  cairo_ps("pbc01_form2_mis_std.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc01_form2_mis_std.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result01_afttest_form2_mis,stdType="std")
   dev.off()
-  cairo_ps("pbc01_form3_mis_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc01_form3_mis_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result01_afttest_form3_mis,stdType="unstd")
   dev.off()
-  cairo_ps("pbc01_form3_mis_std.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc01_form3_mis_std.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result01_afttest_form3_mis,stdType="std")
   dev.off()
-  cairo_ps("pbc01_form4_mis_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc01_form4_mis_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result01_afttest_form4_mis,stdType="unstd")
   dev.off()
-  cairo_ps("pbc01_form4_mis_std.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc01_form4_mis_std.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result01_afttest_form4_mis,stdType="std")
   dev.off()
   
   # ------------------------------------------------------------------------------
-  cairo_ps("pbc02_omni_mis_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc02_omni_mis_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result02_afttest_omni_mis,stdType="unstd")
   dev.off()
-  cairo_ps("pbc02_omni_mis_std.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc02_omni_mis_std.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result02_afttest_omni_mis,stdType="std")
   dev.off()
-  cairo_ps("pbc02_link_mis_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc02_link_mis_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result02_afttest_link_mis,stdType="unstd")
   dev.off()
-  cairo_ps("pbc02_link_mis_std.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc02_link_mis_std.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result02_afttest_link_mis,stdType="std")
   dev.off()
-  cairo_ps("pbc02_form1_mis_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc02_form1_mis_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result02_afttest_form1_mis,stdType="unstd")
   dev.off()
-  cairo_ps("pbc02_form1_mis_std.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc02_form1_mis_std.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result02_afttest_form1_mis,stdType="std")
   dev.off()
-  cairo_ps("pbc02_form2_mis_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc02_form2_mis_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result02_afttest_form2_mis,stdType="unstd")
   dev.off()
-  cairo_ps("pbc02_form2_mis_std.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc02_form2_mis_std.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result02_afttest_form2_mis,stdType="std")
   dev.off()
-  cairo_ps("pbc02_form3_mis_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc02_form3_mis_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result02_afttest_form3_mis,stdType="unstd")
   dev.off()
-  cairo_ps("pbc02_form3_mis_std.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc02_form3_mis_std.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result02_afttest_form3_mis,stdType="std")
   dev.off()
-  cairo_ps("pbc02_form4_mis_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc02_form4_mis_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result02_afttest_form4_mis,stdType="unstd")
   dev.off()
-  cairo_ps("pbc02_form4_mis_std.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc02_form4_mis_std.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result02_afttest_form4_mis,stdType="std")
   dev.off()
   
   # ------------------------------------------------------------------------------
   # ------------------------------------------------------------------------------
-  cairo_ps("pbc01_omni_mns_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc01_omni_mns_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result01_afttest_omni_mns,stdType="unstd")
   dev.off()
-  cairo_ps("pbc01_omni_mns_std.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc01_omni_mns_std.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result01_afttest_omni_mns,stdType="std")
   dev.off()
-  cairo_ps("pbc01_link_mns_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc01_link_mns_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result01_afttest_link_mns,stdType="unstd")
   dev.off()
-  cairo_ps("pbc01_link_mns_std.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc01_link_mns_std.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result01_afttest_link_mns,stdType="std")
   dev.off()
-  cairo_ps("pbc01_form1_mns_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc01_form1_mns_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result01_afttest_form1_mns,stdType="unstd")
   dev.off()
-  cairo_ps("pbc01_form1_mns_std.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc01_form1_mns_std.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result01_afttest_form1_mns,stdType="std")
   dev.off()
-  cairo_ps("pbc01_form2_mns_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc01_form2_mns_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result01_afttest_form2_mns,stdType="unstd")
   dev.off()
-  cairo_ps("pbc01_form2_mns_std.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc01_form2_mns_std.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result01_afttest_form2_mns,stdType="std")
   dev.off()
-  cairo_ps("pbc01_form3_mns_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc01_form3_mns_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result01_afttest_form3_mns,stdType="unstd")
   dev.off()
-  cairo_ps("pbc01_form3_mns_std.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc01_form3_mns_std.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result01_afttest_form3_mns,stdType="std")
   dev.off()
-  cairo_ps("pbc01_form4_mns_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc01_form4_mns_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result01_afttest_form4_mns,stdType="unstd")
   dev.off()
-  cairo_ps("pbc01_form4_mns_std.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc01_form4_mns_std.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result01_afttest_form4_mns,stdType="std")
   dev.off()
   
   # ------------------------------------------------------------------------------
-  cairo_ps("pbc02_omni_mns_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc02_omni_mns_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result02_afttest_omni_mns,stdType="unstd")
   dev.off()
-  cairo_ps("pbc02_omni_mns_std.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc02_omni_mns_std.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result02_afttest_omni_mns,stdType="std")
   dev.off()
-  cairo_ps("pbc02_link_mns_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc02_link_mns_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result02_afttest_link_mns,stdType="unstd")
   dev.off()
-  cairo_ps("pbc02_link_mns_std.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc02_link_mns_std.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result02_afttest_link_mns,stdType="std")
   dev.off()
-  cairo_ps("pbc02_form1_mns_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc02_form1_mns_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result02_afttest_form1_mns,stdType="unstd")
   dev.off()
-  cairo_ps("pbc02_form1_mns_std.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc02_form1_mns_std.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result02_afttest_form1_mns,stdType="std")
   dev.off()
-  cairo_ps("pbc02_form2_mns_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc02_form2_mns_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result02_afttest_form2_mns,stdType="unstd")
   dev.off()
-  cairo_ps("pbc02_form2_mns_std.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc02_form2_mns_std.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result02_afttest_form2_mns,stdType="std")
   dev.off()
-  cairo_ps("pbc02_form3_mns_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc02_form3_mns_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result02_afttest_form3_mns,stdType="unstd")
   dev.off()
-  cairo_ps("pbc02_form3_mns_std.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc02_form3_mns_std.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result02_afttest_form3_mns,stdType="std")
   dev.off()
-  cairo_ps("pbc02_form4_mns_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc02_form4_mns_unstd.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result02_afttest_form4_mns,stdType="unstd")
   dev.off()
-  cairo_ps("pbc02_form4_mns_std.eps",onefile=F,height=4,width=8, fallback_resolution = 600)
+  cairo_ps("pbc02_form4_mns_std.eps",onefile=F,height=4,width=8, fallback_resolution = 300)
   afttestplot(result02_afttest_form4_mns,stdType="std")
   dev.off()
 }
