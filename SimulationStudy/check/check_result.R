@@ -6,7 +6,7 @@ setwd("/Users/WooJung/Documents/Rproject/afttest_analysis/SimulationStudy/NewSim
 alpha = 0.05
 
 # 
-Scenario = 11
+Scenario = 31
 N = 500
 
 # ------------------------------------------------------------------------------
@@ -91,9 +91,9 @@ gamma3_rejectionratio
 gamma4_rejectionratio
 gamma5_rejectionratio
 
-gamma0_sim
-gamma1_sim
-gamma2_sim
-gamma3_sim
-gamma4_sim
-gamma5_sim
+# gamma0_sim
+# gamma1_sim
+# gamma2_sim
+# gamma3_sim
+# gamma4_sim
+# gamma5_sim

@@ -1,12 +1,10 @@
 library(knitr)
 library(kableExtra)
 
-setwd("C:/Users/WooJung/Documents/Rproject/afttest_analysis/source")
+setwd("/Users/WooJung/Documents/Rproject/afttest_analysis/source")
 source("afttest_source_r.R")
 
-# setwd("C:/Users/WooJung/Desktop")
-# setwd("C:/Users/WooJung/Documents/Rproject/afttest_analysis")
-setwd("C:/Users/WooJung/Documents/Rproject/afttest_analysis/SimulationStudy")
+setwd("/Users/WooJung/Documents/Rproject/afttest_analysis/SimulationStudy/NewSim")
 
 Scenario = 1;result_Scn1 = rejectionratio(Scenario)
 kable(result_Scn1, digits = 3, "latex", booktabs = T, escape = F,
