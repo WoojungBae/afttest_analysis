@@ -8,17 +8,17 @@ generate_data = function(n,gamma0,Scenario) {
     beta_0 = -4
     beta_1 = 1
     if(gamma0 == 0){
-      tau = 3.455
+      tau = 78.900
     } else if(gamma0 == 0.1){
-      tau = 3.185
+      tau = 61.030
     } else if(gamma0 == 0.2){
-      tau = 2.953
+      tau = 48.900
     } else if(gamma0 == 0.3){
-      tau = 2.745
+      tau = 39.950
     } else if(gamma0 == 0.4){
-      tau = 2.555
+      tau = 33.090
     } else if(gamma0 == 0.5){
-      tau = 2.37
+      tau = 28.000
     }
     
     # ------------------------------------------------------------------------------
@@ -28,7 +28,7 @@ generate_data = function(n,gamma0,Scenario) {
     # ------------------------------------------------------------------------------
     # censoring rate 20% 
     # T: rnorm(n,0,1)
-    # C: exp(rnorm(n,tau,1))
+    # C: runif(n,0,tau)
     
     # T_data: true event time
     # C_data: true censoring time
@@ -36,7 +36,7 @@ generate_data = function(n,gamma0,Scenario) {
     # D_data: observed indicator
     # Z_data: covariates fitted
     T_data = exp(-beta_0-beta_1*Z-gamma0*(Z^{2})+rnorm(n,0,1))
-    C_data = exp(rnorm(n,tau,1))
+    C_data = runif(n,0,tau)
     X_data = C_data*(T_data>C_data)+T_data*(T_data<=C_data)
     D_data = 0*(T_data>C_data)+1*(T_data<=C_data)
     Z_data = Z
@@ -47,17 +47,17 @@ generate_data = function(n,gamma0,Scenario) {
     beta_0 = -4
     beta_1 = 1
     if(gamma0 == 0){
-      tau = 2.438
+      tau = 28.200
     } else if(gamma0 == 0.1){
-      tau = 2.046
+      tau = 19.530
     } else if(gamma0 == 0.2){
-      tau = 1.690
+      tau = 13.900
     } else if(gamma0 == 0.3){
-      tau = 1.352
+      tau = 10.040
     } else if(gamma0 == 0.4){
-      tau = 1.020
+      tau = 7.310
     } else if(gamma0 == 0.5){
-      tau = 0.701
+      tau = 5.350
     }
     
     # ------------------------------------------------------------------------------
@@ -67,7 +67,7 @@ generate_data = function(n,gamma0,Scenario) {
     # ------------------------------------------------------------------------------
     # censoring rate 40% 
     # T: rnorm(n,0,1)
-    # C: exp(rnorm(n,tau,1))
+    # C: runif(n,0,tau)
     
     # T_data: true event time
     # C_data: true censoring time
@@ -75,7 +75,7 @@ generate_data = function(n,gamma0,Scenario) {
     # D_data: observed indicator
     # Z_data: covariates fitted
     T_data = exp(-beta_0-beta_1*Z-gamma0*(Z^{2})+rnorm(n,0,1))
-    C_data = exp(rnorm(n,tau,1))
+    C_data = runif(n,0,tau)
     X_data = C_data*(T_data>C_data)+T_data*(T_data<=C_data)
     D_data = 0*(T_data>C_data)+1*(T_data<=C_data)
     Z_data = Z
@@ -87,17 +87,17 @@ generate_data = function(n,gamma0,Scenario) {
     beta_1 = 1
     beta_2 = 1
     if(gamma0 == 0){
-      tau = 3.017
+      tau = 51.350
     } else if(gamma0 == 0.1){
-      tau = 2.740
+      tau = 39.280
     } else if(gamma0 == 0.2){
-      tau = 2.500
+      tau = 31.095
     } else if(gamma0 == 0.3){
-      tau = 2.281
+      tau = 25.270
     } else if(gamma0 == 0.4){
-      tau = 2.085
+      tau = 20.840
     } else if(gamma0 == 0.5){
-      tau = 1.901
+      tau = 17.415
     }
     
     # ------------------------------------------------------------------------------
@@ -108,7 +108,7 @@ generate_data = function(n,gamma0,Scenario) {
     # ------------------------------------------------------------------------------
     # censoring rate 20% 
     # T: rnorm(n,0,1)
-    # C: exp(rnorm(n,tau,1))
+    # C: runif(n,0,tau)
     
     # T_data: true event time
     # C_data: true censoring time
@@ -116,7 +116,7 @@ generate_data = function(n,gamma0,Scenario) {
     # D_data: observed indicator
     # Z_data: covariates fitted
     T_data = exp(- beta_0 - beta_1 * Z1 - beta_2 * Z2 - gamma0 * (Z2^{2}) + rnorm(n,0,1))
-    C_data = exp(rnorm(n,tau,1))
+    C_data = runif(n,0,tau)
     X_data = C_data * (T_data > C_data) + T_data * (T_data <= C_data)
     D_data = 0 * (T_data > C_data) + 1 * (T_data <= C_data)
     Z_data = cbind(Z1,Z2)
@@ -128,17 +128,17 @@ generate_data = function(n,gamma0,Scenario) {
     beta_1 = 1
     beta_2 = 1
     if(gamma0 == 0){
-      tau = 1.955
+      tau = 17.550
     } else if(gamma0 == 0.1){
-      tau = 1.560
+      tau = 12.063
     } else if(gamma0 == 0.2){
-      tau = 1.200
+      tau = 8.515
     } else if(gamma0 == 0.3){
-      tau = 0.850
+      tau = 6.130
     } else if(gamma0 == 0.4){
-      tau = 0.523
+      tau = 4.445
     } else if(gamma0 == 0.5){
-      tau = 0.205
+      tau = 3.255
     }
     
     # ------------------------------------------------------------------------------
@@ -149,7 +149,7 @@ generate_data = function(n,gamma0,Scenario) {
     # ------------------------------------------------------------------------------
     # censoring rate 40% 
     # T: rnorm(n,0,1)
-    # C: exp(rnorm(n,tau,1))
+    # C: runif(n,0,tau)
     
     # T_data: true event time
     # C_data: true censoring time
@@ -157,7 +157,7 @@ generate_data = function(n,gamma0,Scenario) {
     # D_data: observed indicator
     # Z_data: covariates fitted
     T_data = exp(- beta_0 - beta_1 * Z1 - beta_2 * Z2 - gamma0 * (Z2^{2}) + rnorm(n,0,1))
-    C_data = exp(rnorm(n,tau,1))
+    C_data = runif(n,0,tau)
     X_data = C_data * (T_data > C_data) + T_data * (T_data <= C_data)
     D_data = 0 * (T_data > C_data) + 1 * (T_data <= C_data)
     Z_data = cbind(Z1,Z2)
@@ -169,17 +169,17 @@ generate_data = function(n,gamma0,Scenario) {
     beta_1 = 1
     beta_2 = 1
     if(gamma0 == 0){
-      tau = 3.018
+      tau = 51.335
     } else if(gamma0 == 0.1){
-      tau = 3.001
+      tau = 50.610
     } else if(gamma0 == 0.2){
-      tau = 2.988
+      tau = 49.960
     } else if(gamma0 == 0.3){
-      tau = 2.979
+      tau = 49.500
     } else if(gamma0 == 0.4){
-      tau = 2.973
+      tau = 49.100
     } else if(gamma0 == 0.5){
-      tau = 2.962
+      tau = 48.600
     }
     
     # ------------------------------------------------------------------------------
@@ -190,7 +190,7 @@ generate_data = function(n,gamma0,Scenario) {
     # ------------------------------------------------------------------------------
     # censoring rate 20% 
     # T: rnorm(n,0,1)
-    # C: exp(rnorm(n,tau,1))
+    # C: runif(n,0,tau)
     
     # T_data: true event time
     # C_data: true censoring time
@@ -198,7 +198,7 @@ generate_data = function(n,gamma0,Scenario) {
     # D_data: observed indicator
     # Z_data: covariates fitted
     T_data = exp(- beta_0 - beta_1 * Z1 - beta_2 * Z2 - gamma0 * lgamma(1+0.3*Z2^{2}) + rnorm(n,0,1))
-    C_data = exp(rnorm(n,tau,1))
+    C_data = runif(n,0,tau)
     X_data = C_data * (T_data > C_data) + T_data * (T_data <= C_data)
     D_data = 0 * (T_data > C_data) + 1 * (T_data <= C_data)
     Z_data = cbind(Z1,Z2)
@@ -210,17 +210,17 @@ generate_data = function(n,gamma0,Scenario) {
     beta_1 = 1
     beta_2 = 1
     if(gamma0 == 0){
-      tau = 1.955
+      tau = 17.550
     } else if(gamma0 == 0.1){
-      tau = 1.921
+      tau = 17.035
     } else if(gamma0 == 0.2){
-      tau = 1.892
+      tau = 16.585
     } else if(gamma0 == 0.3){
-      tau = 1.866
+      tau = 16.180
     } else if(gamma0 == 0.4){
-      tau = 1.840
+      tau = 15.855
     } else if(gamma0 == 0.5){
-      tau = 1.820
+      tau = 15.535
     }
     
     # ------------------------------------------------------------------------------
@@ -231,7 +231,7 @@ generate_data = function(n,gamma0,Scenario) {
     # ------------------------------------------------------------------------------
     # censoring rate 40% 
     # T: rnorm(n,0,1)
-    # C: exp(rnorm(n,tau,1))
+    # C: runif(n,0,tau)
     
     # T_data: true event time
     # C_data: true censoring time
@@ -239,7 +239,7 @@ generate_data = function(n,gamma0,Scenario) {
     # D_data: observed indicator
     # Z_data: covariates fitted
     T_data = exp(- beta_0 - beta_1 * Z1 - beta_2 * Z2 - gamma0 * lgamma(1+0.3*Z2^{2}) + rnorm(n,0,1))
-    C_data = exp(rnorm(n,tau,1))
+    C_data = runif(n,0,tau)
     X_data = C_data * (T_data > C_data) + T_data * (T_data <= C_data)
     D_data = 0 * (T_data > C_data) + 1 * (T_data <= C_data)
     Z_data = cbind(Z1,Z2)
@@ -665,43 +665,43 @@ rejectionratio = function(Scenario) {
   return(resultdataframe)
 }
 
-# Define function to generate datasets
+# # Define function to generate datasets
 # generate_data = function(n,gamma0,Scenario) {
 #   if (Scenario==11){
 #     # --------------------------------- Scenario 1 ---------------------------------
 #     # True Coefficient: beta_0 = -4, beta_1 = 1
 #     beta_0 = -4
 #     beta_1 = 1
-#     if (gamma0 == 0){
-#       tau = 583
-#     } else if (gamma0 == 0.1){
-#       tau = 527
-#     } else if (gamma0 == 0.2){
-#       tau = 475
-#     } else if (gamma0 == 0.3){
-#       tau = 435
-#     } else if (gamma0 == 0.4){
-#       tau = 398
-#     } else if (gamma0 == 0.5){
-#       tau = 369
+#     if(gamma0 == 0){
+#       tau = 3.455
+#     } else if(gamma0 == 0.1){
+#       tau = 3.185
+#     } else if(gamma0 == 0.2){
+#       tau = 2.953
+#     } else if(gamma0 == 0.3){
+#       tau = 2.745
+#     } else if(gamma0 == 0.4){
+#       tau = 2.555
+#     } else if(gamma0 == 0.5){
+#       tau = 2.37
 #     }
 #     
 #     # ------------------------------------------------------------------------------
 #     # Generate covariate Z
-#     Z = rnorm(n,0,1)
+#     Z = rnorm(n,2,1)
 #     
 #     # ------------------------------------------------------------------------------
 #     # censoring rate 20% 
 #     # T: rnorm(n,0,1)
-#     # C: runif(n,0,tau)
+#     # C: exp(rnorm(n,tau,1))
 #     
 #     # T_data: true event time
 #     # C_data: true censoring time
 #     # X_data: observed time
 #     # D_data: observed indicator
 #     # Z_data: covariates fitted
-#     T_data = exp(-beta_0-beta_1*Z-gamma0*(Z^{2})-rnorm(n,0,1))
-#     C_data = runif(n,0,tau)
+#     T_data = exp(-beta_0-beta_1*Z-gamma0*(Z^{2})+rnorm(n,0,1))
+#     C_data = exp(rnorm(n,tau,1))
 #     X_data = C_data*(T_data>C_data)+T_data*(T_data<=C_data)
 #     D_data = 0*(T_data>C_data)+1*(T_data<=C_data)
 #     Z_data = Z
@@ -711,36 +711,36 @@ rejectionratio = function(Scenario) {
 #     # True Coefficient: beta_0 = -4, beta_1 = 1
 #     beta_0 = -4
 #     beta_1 = 1
-#     if (gamma0 == 0){
-#       tau = 208
-#     } else if (gamma0 == 0.1){
-#       tau = 194
-#     } else if (gamma0 == 0.2){
-#       tau = 180
-#     } else if (gamma0 == 0.3){
-#       tau = 167
-#     } else if (gamma0 == 0.4){
-#       tau = 154.5
-#     } else if (gamma0 == 0.5){
-#       tau = 143.4
+#     if(gamma0 == 0){
+#       tau = 2.438
+#     } else if(gamma0 == 0.1){
+#       tau = 2.046
+#     } else if(gamma0 == 0.2){
+#       tau = 1.690
+#     } else if(gamma0 == 0.3){
+#       tau = 1.352
+#     } else if(gamma0 == 0.4){
+#       tau = 1.020
+#     } else if(gamma0 == 0.5){
+#       tau = 0.701
 #     }
 #     
 #     # ------------------------------------------------------------------------------
 #     # Generate covariate Z
-#     Z = rnorm(n,0,1)
+#     Z = rnorm(n,2,1)
 #     
 #     # ------------------------------------------------------------------------------
 #     # censoring rate 40% 
 #     # T: rnorm(n,0,1)
-#     # C: runif(n,0,tau)
+#     # C: exp(rnorm(n,tau,1))
 #     
 #     # T_data: true event time
 #     # C_data: true censoring time
 #     # X_data: observed time
 #     # D_data: observed indicator
 #     # Z_data: covariates fitted
-#     T_data = exp(-beta_0-beta_1*Z-gamma0*(Z^{2})-rnorm(n,0,1))
-#     C_data = runif(n,0,tau)
+#     T_data = exp(-beta_0-beta_1*Z-gamma0*(Z^{2})+rnorm(n,0,1))
+#     C_data = exp(rnorm(n,tau,1))
 #     X_data = C_data*(T_data>C_data)+T_data*(T_data<=C_data)
 #     D_data = 0*(T_data>C_data)+1*(T_data<=C_data)
 #     Z_data = Z
@@ -751,37 +751,37 @@ rejectionratio = function(Scenario) {
 #     beta_0 = -4
 #     beta_1 = 1
 #     beta_2 = 1
-#     if (gamma0 == 0){
-#       tau = 379
-#     } else if (gamma0 == 0.1){
-#       tau = 343.5
-#     } else if (gamma0 == 0.2){
-#       tau = 312
-#     } else if (gamma0 == 0.3){
-#       tau = 283
-#     } else if (gamma0 == 0.4){
-#       tau = 261
-#     } else if (gamma0 == 0.5){
-#       tau = 241
+#     if(gamma0 == 0){
+#       tau = 3.017
+#     } else if(gamma0 == 0.1){
+#       tau = 2.740
+#     } else if(gamma0 == 0.2){
+#       tau = 2.500
+#     } else if(gamma0 == 0.3){
+#       tau = 2.281
+#     } else if(gamma0 == 0.4){
+#       tau = 2.085
+#     } else if(gamma0 == 0.5){
+#       tau = 1.901
 #     }
 #     
 #     # ------------------------------------------------------------------------------
 #     # Generate covariate Z
 #     Z1 = rbinom(n,1,0.5)
-#     Z2 = rnorm(n,0,1)
+#     Z2 = rnorm(n,2,1)
 #     
 #     # ------------------------------------------------------------------------------
 #     # censoring rate 20% 
 #     # T: rnorm(n,0,1)
-#     # C: runif(n,0,tau)
+#     # C: exp(rnorm(n,tau,1))
 #     
 #     # T_data: true event time
 #     # C_data: true censoring time
 #     # X_data: observed time
 #     # D_data: observed indicator
 #     # Z_data: covariates fitted
-#     T_data = exp(- beta_0 - beta_1 * Z1 - beta_2 * Z2 - gamma0 * (Z2^{2}) - rnorm(n,0,1))
-#     C_data = runif(n,0,tau)
+#     T_data = exp(- beta_0 - beta_1 * Z1 - beta_2 * Z2 - gamma0 * (Z2^{2}) + rnorm(n,0,1))
+#     C_data = exp(rnorm(n,tau,1))
 #     X_data = C_data * (T_data > C_data) + T_data * (T_data <= C_data)
 #     D_data = 0 * (T_data > C_data) + 1 * (T_data <= C_data)
 #     Z_data = cbind(Z1,Z2)
@@ -792,37 +792,37 @@ rejectionratio = function(Scenario) {
 #     beta_0 = -4
 #     beta_1 = 1
 #     beta_2 = 1
-#     if (gamma0 == 0){
-#       tau = 129.7
-#     } else if (gamma0 == 0.1){
-#       tau = 120.5
-#     } else if (gamma0 == 0.2){
-#       tau = 112
-#     } else if (gamma0 == 0.3){
-#       tau = 103.5
-#     } else if (gamma0 == 0.4){
-#       tau = 95.8
-#     } else if (gamma0 == 0.5){
-#       tau = 88.8
+#     if(gamma0 == 0){
+#       tau = 1.955
+#     } else if(gamma0 == 0.1){
+#       tau = 1.560
+#     } else if(gamma0 == 0.2){
+#       tau = 1.200
+#     } else if(gamma0 == 0.3){
+#       tau = 0.850
+#     } else if(gamma0 == 0.4){
+#       tau = 0.523
+#     } else if(gamma0 == 0.5){
+#       tau = 0.205
 #     }
 #     
 #     # ------------------------------------------------------------------------------
 #     # Generate covariate Z
 #     Z1 = rbinom(n,1,0.5)
-#     Z2 = rnorm(n,0,1)
+#     Z2 = rnorm(n,2,1)
 #     
 #     # ------------------------------------------------------------------------------
 #     # censoring rate 40% 
 #     # T: rnorm(n,0,1)
-#     # C: runif(n,0,tau)
+#     # C: exp(rnorm(n,tau,1))
 #     
 #     # T_data: true event time
 #     # C_data: true censoring time
 #     # X_data: observed time
 #     # D_data: observed indicator
 #     # Z_data: covariates fitted
-#     T_data = exp(- beta_0 - beta_1 * Z1 - beta_2 * Z2 - gamma0 * (Z2^{2}) - rnorm(n,0,1))
-#     C_data = runif(n,0,tau)
+#     T_data = exp(- beta_0 - beta_1 * Z1 - beta_2 * Z2 - gamma0 * (Z2^{2}) + rnorm(n,0,1))
+#     C_data = exp(rnorm(n,tau,1))
 #     X_data = C_data * (T_data > C_data) + T_data * (T_data <= C_data)
 #     D_data = 0 * (T_data > C_data) + 1 * (T_data <= C_data)
 #     Z_data = cbind(Z1,Z2)
@@ -833,37 +833,37 @@ rejectionratio = function(Scenario) {
 #     beta_0 = -4
 #     beta_1 = 1
 #     beta_2 = 1
-#     if (gamma0 == 0){
-#       tau = 379
-#     } else if (gamma0 == 0.1){
-#       tau = 372
-#     } else if (gamma0 == 0.2){
-#       tau = 368.5
-#     } else if (gamma0 == 0.3){
-#       tau = 365
-#     } else if (gamma0 == 0.4){
-#       tau = 362.6
-#     } else if (gamma0 == 0.5){
-#       tau = 360
+#     if(gamma0 == 0){
+#       tau = 3.018
+#     } else if(gamma0 == 0.1){
+#       tau = 3.001
+#     } else if(gamma0 == 0.2){
+#       tau = 2.988
+#     } else if(gamma0 == 0.3){
+#       tau = 2.979
+#     } else if(gamma0 == 0.4){
+#       tau = 2.973
+#     } else if(gamma0 == 0.5){
+#       tau = 2.962
 #     }
 #     
 #     # ------------------------------------------------------------------------------
 #     # Generate covariate Z
 #     Z1 = rbinom(n,1,0.5)
-#     Z2 = rnorm(n,0,1)
+#     Z2 = rnorm(n,2,1)
 #     
 #     # ------------------------------------------------------------------------------
 #     # censoring rate 20% 
 #     # T: rnorm(n,0,1)
-#     # C: runif(n,0,tau)
+#     # C: exp(rnorm(n,tau,1))
 #     
 #     # T_data: true event time
 #     # C_data: true censoring time
 #     # X_data: observed time
 #     # D_data: observed indicator
 #     # Z_data: covariates fitted
-#     T_data = exp(- beta_0 - beta_1 * Z1 - beta_2 * Z2 - gamma0 * lgamma(1+0.3*(2+Z2)^{2}) - rnorm(n,0,1))
-#     C_data = runif(n,0,tau)
+#     T_data = exp(- beta_0 - beta_1 * Z1 - beta_2 * Z2 - gamma0 * lgamma(1+0.3*Z2^{2}) + rnorm(n,0,1))
+#     C_data = exp(rnorm(n,tau,1))
 #     X_data = C_data * (T_data > C_data) + T_data * (T_data <= C_data)
 #     D_data = 0 * (T_data > C_data) + 1 * (T_data <= C_data)
 #     Z_data = cbind(Z1,Z2)
@@ -874,37 +874,37 @@ rejectionratio = function(Scenario) {
 #     beta_0 = -4
 #     beta_1 = 1
 #     beta_2 = 1
-#     if (gamma0 == 0){
-#       tau = 129.3
-#     } else if (gamma0 == 0.1){
-#       tau = 125.9
-#     } else if (gamma0 == 0.2){
-#       tau = 122.6
-#     } else if (gamma0 == 0.3){
-#       tau = 119.7
-#     } else if (gamma0 == 0.4){
-#       tau = 116.9
-#     } else if (gamma0 == 0.5){
-#       tau = 114.8
+#     if(gamma0 == 0){
+#       tau = 1.955
+#     } else if(gamma0 == 0.1){
+#       tau = 1.921
+#     } else if(gamma0 == 0.2){
+#       tau = 1.892
+#     } else if(gamma0 == 0.3){
+#       tau = 1.866
+#     } else if(gamma0 == 0.4){
+#       tau = 1.840
+#     } else if(gamma0 == 0.5){
+#       tau = 1.820
 #     }
 #     
 #     # ------------------------------------------------------------------------------
 #     # Generate covariate Z
 #     Z1 = rbinom(n,1,0.5)
-#     Z2 = rnorm(n,0,1)
+#     Z2 = rnorm(n,2,1)
 #     
 #     # ------------------------------------------------------------------------------
 #     # censoring rate 40% 
 #     # T: rnorm(n,0,1)
-#     # C: runif(n,0,tau)
+#     # C: exp(rnorm(n,tau,1))
 #     
 #     # T_data: true event time
 #     # C_data: true censoring time
 #     # X_data: observed time
 #     # D_data: observed indicator
 #     # Z_data: covariates fitted
-#     T_data = exp(- beta_0 - beta_1 * Z1 - beta_2 * Z2 - gamma0 * lgamma(1+0.3*(2+Z2)^{2}) - rnorm(n,0,1))
-#     C_data = runif(n,0,tau)
+#     T_data = exp(- beta_0 - beta_1 * Z1 - beta_2 * Z2 - gamma0 * lgamma(1+0.3*Z2^{2}) + rnorm(n,0,1))
+#     C_data = exp(rnorm(n,tau,1))
 #     X_data = C_data * (T_data > C_data) + T_data * (T_data <= C_data)
 #     D_data = 0 * (T_data > C_data) + 1 * (T_data <= C_data)
 #     Z_data = cbind(Z1,Z2)

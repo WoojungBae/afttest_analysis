@@ -1,12 +1,13 @@
 # setwd("/Users/WooJung/Desktop")
 # setwd("/Users/WooJung/Documents/Rproject/afttest_analysis")
-setwd("/Users/WooJung/Documents/Rproject/afttest_analysis/SimulationStudy/NewSim")
+# setwd("/Users/WooJung/Documents/Rproject/afttest_analysis/SimulationStudy/NewSim")
+setwd("/Users/WooJung/Documents/Rproject/afttest_analysis/SimulationStudy/OldSim")
 
 # Type 1 error control
 alpha = 0.05
 
 # 
-Scenario = 31
+Scenario = 11
 N = 500
 
 # ------------------------------------------------------------------------------
